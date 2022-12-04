@@ -31,39 +31,32 @@
    </head>
    <!-- body -->
    <body class="main-layout">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
-      </div>
-      <!-- end loader -->
       <!-- top -->
                     <!-- header -->
          <header class="header-area">
-            <div class="left">
-               <a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a>
+         <div class="left">
+               <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
-               <a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a>
+               <a href="u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
             <div class="container">
                <div class="row d_flex">
                   <div class="col-sm-3 logo_sm">
                      <div class="logo">
-                        <a href="index.html"></a>
+                        <a href="index.php"></a>
                      </div>
                   </div>
                   <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
                      <div class="navbar-area">
-                        <nav class="site-navbar">
+                        <nav class="site-navbar navbar">
                            <ul>
-                              <li><a class="active" href="index.html">Home</a></li>
-                              <li><a href="about.html">About</a></li>
-                              <li><a href="action.html">take action</a></li>
-                              <li><a href="index.html" class="logo_midle">covido</a></li>
-                              <li><a href="news.html">news</a></li>
-                              <li><a href="doctores.html">doctores</a></li>
-                               
-                              <li><a href="contact.html">Contact </a></li>
+                              <li><a class="active" href="index.php">Home</a></li>
+                              <li><a href="about.php">About</a></li>
+                              <li><a href="action.php">take action</a></li>
+                              <li><a href="news.php">news</a></li>
+                              <li><a href="doctores.php">doctores</a></li>
+                              <li><a href="contact.php">Contact </a></li>
                            </ul>
                            <button class="nav-toggler">
                            <span></span>
@@ -94,8 +87,8 @@
                               <div class="col-md-8">
                                  <div class="photog">
                                     <h1>Care early<br>Coronavirus</h1>
-                                    <a class="read_more" href="javascript:void(0)" >Read More</a>
-                                    <a class="read_more" href="about.html" >About Us</a>
+                                    <a class="read_more" href="" >Read More</a>
+                                    <a class="read_more" href="about.php" >About Us</a>
                                  </div>
                               </div>
                            </div>
@@ -110,8 +103,8 @@
                               <div class="col-md-8">
                                 <div class="photog">
                                     <h1>Care early<br>Coronavirus</h1>
-                                    <a class="read_more" href="javascript:void(0)" >Read More</a>
-                                    <a class="read_more" href="about.html" >About Us</a>
+                                    <a class="read_more" href="" >Read More</a>
+                                    <a class="read_more" href="about.php" >About Us</a>
                                  </div>
                               </div>
                            </div>
@@ -126,8 +119,8 @@
                               <div class="col-md-8">
                                 <div class="photog">
                                     <h1>Care early<br>Coronavirus</h1>
-                                    <a class="read_more" href="javascript:void(0)" >Read More</a>
-                                    <a class="read_more" href="about.html" >About Us</a>
+                                    <a class="read_more" href="" >Read More</a>
+                                    <a class="read_more" href="about.php" >About Us</a>
                                  </div>
                               </div>
                            </div>
@@ -157,7 +150,7 @@
                      <h2>About Corona Virus </h2>
                      <p>English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for
                      </p>
-                     <a class="read_more" href="about.html">About More</a>
+                     <a class="read_more" href="about.php">About More</a>
                   </div>
                </div>
                <div class="col-md-5">
@@ -184,7 +177,7 @@
                      <h2>Coronavirus what it is?</h2>
                      <p>when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
                      </p>
-                     <a class="read_more" href="coronata.html">About More</a>
+                     <a class="read_more" href="coronata.php">About More</a>
                   </div>
                </div>
             </div>
@@ -218,7 +211,7 @@
                            <h3> Wear Mask</h3>
                            <span> Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</span>
                           </div>
-                           <a class="read_more" href="protect.html">Read More</a>
+                           <a class="read_more" href="protect.php">Read More</a>
                         </div>
                      </div>
                      <div class="item">
@@ -228,7 +221,7 @@
                            <h3> Wash Your Hands</h3>
                            <span> Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</span>
                           </div>
-                           <a class="read_more" href="protect.html">Read More</a>
+                           <a class="read_more" href="protect.php">Read More</a>
                         </div>
                      </div>
                      <div class="item">
@@ -238,7 +231,7 @@
                            <h3> Stay at Home</h3>
                            <span> Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</span>
                           </div>
-                           <a class="read_more" href="protect.html">Read More</a>
+                           <a class="read_more" href="protect.php">Read More</a>
                         </div>
                      </div>
                   </div>
@@ -264,7 +257,7 @@
                <div class=" col-md-4">
                   <div class="latest text_align_center">
                      <figure><img src="images/cases1.png" alt="#"/></figure>
-                      <a class="read_more" href="cases.html">Read More</a>
+                      <a class="read_more" href="cases.php">Read More</a>
                      <div class="nostrud">
                         <h3>Cases 01</h3>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
@@ -274,7 +267,7 @@
                <div class=" col-md-4">
                   <div class="latest text_align_center">
                      <figure><img src="images/cases2.png" alt="#"/></figure>
-                      <a class="read_more" href="cases.html">Read More</a>
+                      <a class="read_more" href="cases.php">Read More</a>
                      <div class="nostrud">
                         <h3>Cases 02</h3>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
@@ -284,7 +277,7 @@
                <div class=" col-md-4">
                   <div class="latest text_align_center">
                      <figure><img src="images/cases3.png" alt="#"/></figure>
-                      <a class="read_more" href="cases.html">Read More</a>
+                      <a class="read_more" href="cases.php">Read More</a>
                      <div class="nostrud">
                         <h3>Cases 03</h3>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
@@ -362,12 +355,12 @@
                            <div class="hedingh3 text_align_left">
                               <h3>Resources</h3>
                               <ul class="menu_footer">
-                                 <li><a href="index.html">Home</a><li>
-                                 <li><a href="javascript:void(0)">What we do</a><li>
-                                 <li> <a href="javascript:void(0)">Media</a><li>
-                                 <li> <a href="javascript:void(0)">Travel Advice</a><li>
-                                 <li><a href="javascript:void(0)">Protection</a><li>
-                                 <li><a href="javascript:void(0)">Care</a><li>
+                                 <li><a href="index.php">Home</a><li>
+                                 <li><a href="">What we do</a><li>
+                                 <li> <a href="">Media</a><li>
+                                 <li> <a href="">Travel Advice</a><li>
+                                 <li><a href="">Protection</a><li>
+                                 <li><a href="">Care</a><li>
                               </ul>
                              
            
@@ -393,7 +386,7 @@
                            Call : +01 1234567890
                         </li>
                         <li><i class="fa fa-envelope" aria-hidden="true"></i>
-                           <a href="Javascript:void(0)">Email : demo@gmail.com</a>
+                           <a href="">Email : demo@gmail.com</a>
                         </li>
                      </ul>
                             

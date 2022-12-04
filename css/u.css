@@ -1,3 +1,4 @@
+
 /*--------------------------------------------------------------------- 
 File Name: style.css 
 ---------------------------------------------------------------------*/
@@ -618,12 +619,12 @@ button {
 /** coronata section **/
 
 .coronata {
-    background:#fff;
+    background: #fff;
    /* padding-top: 100px; */
-   /* background-image: url(../images/bg.jpg);
+   background-image: url(../images/bg.jpg);
    background-size: cover;
    size: 100%;
-   */
+  
 }
 
 .coronata .titlepage {
@@ -1168,3 +1169,55 @@ padding-bottom: 40px;}
     padding-bottom: 80px;
 }
 
+
+/* P_LOGIN CSS START */
+
+.form{
+    background-color: #fff;
+    color: red;
+    height: 100%;
+    width:100%;
+    border-radius:8px;
+    margin-left:300px;
+
+}
+ .form h4{
+    padding-top:30px;
+}
+.form input{
+    width:90%;
+    height:40px;
+    margin-bottom: 20px;
+    border-radius:5px;
+    border-style:solid;
+
+}
+.form form{
+    margin-left:50px;
+}
+.btnn{
+    width:50%;
+    border-radius:5px;
+}
+
+/* P_LOGIN CSS END */
+
+/* U_PAGE CSS START */
+.btnnn{
+    width: 50%;
+    border-radius: 30px;
+}
+.btnnn:hover{
+    background-color: chocolate;
+}
+.formm{
+    background-color: #fff;
+    height: 100%;
+    width:100%;
+    border-radius:8px;
+    margin-left:300px;
+
+}
+.formm h4{
+    padding-top:30px;
+}

@@ -35,7 +35,7 @@
                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
-               <a href="../u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
+               <a href="u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
             <div class="container">
                <div class="row d_flex">
@@ -69,7 +69,7 @@
       <div class="coronata">
          <div class="container">
             <div class="row">
-            <h1 class="mt-5 ml-3">Register as a patient</h1>
+            <h1 class="mt-5 ml-3">Register as a hospital</h1>
 
             <div class= "col-lg-7 col-md-7 col-sm-7">
             <form action="" method="post" enctype="multipart/form-data">
