@@ -8,14 +8,14 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Users</title>
+      <title>Login as a hospital</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="../css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="css/u.css">
+      <link rel="stylesheet" href="../css/u.css">
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css">
       <!-- fevicon -->
@@ -35,7 +35,7 @@
                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
-               <a href="u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
+               <a href="../u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
             <div class="container">
                <div class="row d_flex">
@@ -48,13 +48,13 @@
                      <div class="navbar-area">
                         <nav class="site-navbar">
                            <ul>
-                              <li><a href="index.php">Home</a></li>
-                              <li><a href="about.php">About</a></li>
-                              <li><a href="action.php">take action</a></li>
+                              <li><a href="../index.php">Home</a></li>
+                              <li><a href="../about.php">About</a></li>
+                              <li><a href="../action.php">take action</a></li>
                               <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
-                              <li><a  href="news.php">news</a></li>
-                              <li><a href="doctores.php">doctores</a></li>
-                              <li><a href="contact.php">Contact </a></li>
+                              <li><a  href="../news.php">news</a></li>
+                              <li><a href="../doctores.php">doctores</a></li>
+                              <li><a href="../contact.php">Contact </a></li>
                            </ul>
                         </nav>
                      </div>
@@ -69,16 +69,23 @@
          <div class="container">
             <div class="row">
            <div class="col-lg-6 col-md-6 col-sm-6 mb-5">
-            <div class="formm">
-               <h4 class="mt-5 mb-3 text-center">Sign up as...</h4>
+            <div class="form">
+               <h4 class="mt-5 mb-5 text-center">Login to view your data</h4>
+            <form action="" method="post">
+               <label for="name">Hospital Name</label>
+               <br>
+               <input type="text" name="l_name" id="patient" required>
+               <br>
+               <label for="email">Email</label>
+               <br>
+               <input type="email" name="l_email" id="email" required>
+               <br>
+               <label for="password">Password</label>
+               <br>
+               <input type="password" name="l_pass" id="pass" required>
+               <br>
                <div class="text-center">
-                  <a href="patients/register.php" class="btn btn-danger btnnn mt-4 text-center mr-4"><button></button>Patient</a>
-               </div>
-               <div class="text-center">
-                  <a href="hospital/h_register.php" class="btn btn-danger btnnn mt-4 text-center mr-4"><button></button>Hospital</a>
-               </div>
-               <div class="text-center">
-                  <a href="" class="btn btn-danger btnnn mt-4 text-center mr-4"><button></button>Admin</a>
+                  <a href="" class="btn btn-danger btnn mt-4 text-center mr-5"><button name="login" type="submit"></button>Continue</a>
                </div>
               </form>
             </div>

@@ -136,7 +136,7 @@
                                 <li><i class="fa fa-phone" aria-hidden="true"></i>
                                 Call : +01 1234567890 </li>
                                 <li><i class="fa fa-envelope" aria-hidden="true"></i>
-                                <a href="Javascript:void(0)">Email : demo@gmail.com</a></li>
+                                <a href="">Email : demo@gmail.com</a></li>
                               </ul>  
                            </div>
                         </div>

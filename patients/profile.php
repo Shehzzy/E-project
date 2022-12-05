@@ -13,11 +13,11 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="../css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="css/u.css">
+      <link rel="stylesheet" href="../css/app.css">
       <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="../css/responsive.css">
       <!-- fevicon -->
       <link rel="icon" href="images/fevicon.png" type="image/gif"/>
       <!-- Scrollbar Custom CSS -->
@@ -25,6 +25,8 @@
        <link rel="stylesheet" href="css/owl.carousel.min.css"> 
       <link rel="stylesheet" href="ttps://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+      <script src="https://kit.fontawesome.com/aec557161b.js" crossorigin="anonymous"></script>
+
    </head>
    <!-- body -->
    <body class="main-layout inner_page">
@@ -47,13 +49,13 @@
                   <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
                      <div class="navbar-area">
                         <nav class="site-navbar">
-                           <ul>
-                              <li><a href="index.php">Home</a></li>
-                              <li><a href="about.php">About</a></li>
-                              <li><a href="action.php">take action</a></li>
+                        <ul>
+                              <li><a class="active" href="index.php">Home</a></li>
+                              <li><a href="about.php">Hospitals</a></li>
+                              <li><a href="action.php">Appointments</a></li>
                               <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
-                              <li><a  href="news.php">news</a></li>
-                              <li><a href="doctores.php">doctores</a></li>
+                              <li><a href="news.php">news</a></li>
+                              <li><a href="about.php">About</a></li>
                               <li><a href="contact.php">Contact </a></li>
                            </ul>
                         </nav>
@@ -68,23 +70,36 @@
       <div class="coronata">
          <div class="container">
             <div class="row">
-           <div class="col-lg-6 col-md-6 col-sm-6 mb-5">
-            <div class="formm">
-               <h4 class="mt-5 mb-3 text-center">Sign up as...</h4>
-               <div class="text-center">
-                  <a href="patients/register.php" class="btn btn-danger btnnn mt-4 text-center mr-4"><button></button>Patient</a>
-               </div>
-               <div class="text-center">
-                  <a href="hospital/h_register.php" class="btn btn-danger btnnn mt-4 text-center mr-4"><button></button>Hospital</a>
-               </div>
-               <div class="text-center">
-                  <a href="" class="btn btn-danger btnnn mt-4 text-center mr-4"><button></button>Admin</a>
-               </div>
-              </form>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+                <aside>
+                  <br>
+                  <br>
+                  <a href="profile.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My Profile</span></a>
+                  <br>
+                    <a href="app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My appoinments</span></a>
+                    <br>
+                    <a href="b_app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
+                    <br>
+                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request a Covid test</span></a>
+                    <br>
+                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request vaccination</span></a>
+                    <br>
+                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Results</span></a>
+                    <br>
+                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Reports</span></a>
+                    <br>
+                </aside>
             </div>
-           </div>
-  </div>
-      </div>
+            <div class="col-lg-4 col-md-6 col-sm-10 ml-5">
+               <h2 class="text-uppercase">My profile</h2>
+               <br>
+               <br>
+               <img src="" alt="" class="ml-5">
+               <h4>Personal Information</h4>
+
+            </div>
+               </div>
+            </div>
       </div>
       
       <!-- end coronata -->

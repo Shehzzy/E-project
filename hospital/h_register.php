@@ -35,13 +35,13 @@
                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
-               <a href="u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
+               <a href="../u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
             <div class="container">
                <div class="row d_flex">
                   <div class="col-sm-3 logo_sm">
                      <div class="logo">
-                        <a href="../index.html"></a>
+                        <a href="../index.php"></a>
                      </div>
                   </div>
                   <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
@@ -116,13 +116,13 @@
          <label for="number">Mobile Number </label>
          <input type="text" class="form-control" placeholder="Enter your mobile number" id="num" name="num">
          </div>
-  <img src="../images/pat.jpg" alt=""/>
+  <img src="../images/h_reg.png" alt="hospital img " class="ml-5 mt-5" />
   </div>
   </div>
   <div class="text-center text-white">
   <button type="submit" class="btn btn-danger mt-5 mb-5" name="register">Register now </button>
   <br>
-  <a href="p_login.php" class="btn">Already have an account? Login now</a>
+  <a href="h_login.php" class="btn">Already have an account? Login now</a>
   </form>
   </div>
       </div>
@@ -170,7 +170,7 @@
                                 <li><i class="fa fa-phone" aria-hidden="true"></i>
                                 Call : +01 1234567890 </li>
                                 <li><i class="fa fa-envelope" aria-hidden="true"></i>
-                                <a href="Javascript:void(0)">Email : demo@gmail.com</a></li>
+                                <a href="">Email : demo@gmail.com</a></li>
                               </ul>  
                            </div>
                         </div>

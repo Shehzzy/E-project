@@ -41,7 +41,7 @@
                <div class="row d_flex">
                   <div class="col-sm-3 logo_sm">
                      <div class="logo">
-                        <a href="../index.html"></a>
+                        <a href="../index.php"></a>
                      </div>
                   </div>
                   <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
@@ -170,7 +170,7 @@
                                 <li><i class="fa fa-phone" aria-hidden="true"></i>
                                 Call : +01 1234567890 </li>
                                 <li><i class="fa fa-envelope" aria-hidden="true"></i>
-                                <a href="Javascript:void(0)">Email : demo@gmail.com</a></li>
+                                <a href="">Email : demo@gmail.com</a></li>
                               </ul>  
                            </div>
                         </div>

@@ -40,30 +40,29 @@
                     <!-- header -->
          <header class="header-area">
             <div class="left">
-               <a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a>
+               <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
-               <a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a>
+               <a href="u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
             <div class="container">
                <div class="row d_flex">
                   <div class="col-sm-3 logo_sm">
                      <div class="logo">
-                        <a href="index.html"></a>
+                        <a href="index.php"></a>
                      </div>
                   </div>
                   <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
                      <div class="navbar-area">
                         <nav class="site-navbar">
-                           <ul>
-                              <li><a href="index.html">Home</a></li>
-                              <li><a href="about.html">About</a></li>
-                              <li><a class="active" href="action.html">take action</a></li>
-                              <li><a href="index.html" class="logo_midle">covido</a></li>
-                              <li><a href="news.html">news</a></li>
-                              <li><a href="doctores.html">doctores</a></li>
-                               
-                              <li><a href="contact.html">Contact </a></li>
+                        <ul>
+                              <li><a href="index.php">Home</a></li>
+                              <li><a href="about.php">About</a></li>
+                              <li><a href="action.php">take action</a></li>
+                              <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
+                              <li><a class="active" href="news.php">news</a></li>
+                              <li><a href="doctores.php">doctores</a></li>
+                              <li><a href="contact.php">Contact </a></li>
                            </ul>
                            <button class="nav-toggler">
                            <span></span>
@@ -128,12 +127,12 @@
                            <div class="hedingh3 text_align_left">
                               <h3>Resources</h3>
                               <ul class="menu_footer">
-                                 <li><a href="index.html">Home</a><li>
-                                 <li><a href="javascript:void(0)">What we do</a><li>
-                                 <li> <a href="javascript:void(0)">Media</a><li>
-                                 <li> <a href="javascript:void(0)">Travel Advice</a><li>
-                                 <li><a href="javascript:void(0)">Protection</a><li>
-                                 <li><a href="javascript:void(0)">Care</a><li>
+                                 <li><a href="index.php">Home</a><li>
+                                 <li><a href="">What we do</a><li>
+                                 <li> <a href="">Media</a><li>
+                                 <li> <a href="">Travel Advice</a><li>
+                                 <li><a href="">Protection</a><li>
+                                 <li><a href="">Care</a><li>
                               </ul>
                              
            
@@ -159,7 +158,7 @@
                            Call : +01 1234567890
                         </li>
                         <li><i class="fa fa-envelope" aria-hidden="true"></i>
-                           <a href="Javascript:void(0)">Email : demo@gmail.com</a>
+                           <a href="">Email : demo@gmail.com</a>
                         </li>
                      </ul>
                             

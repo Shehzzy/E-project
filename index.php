@@ -50,12 +50,13 @@
                   <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
                      <div class="navbar-area">
                         <nav class="site-navbar navbar">
-                           <ul>
+                        <ul>
                               <li><a class="active" href="index.php">Home</a></li>
-                              <li><a href="about.php">About</a></li>
-                              <li><a href="action.php">take action</a></li>
+                              <li><a href="about.php">Hospitals</a></li>
+                              <li><a href="action.php">Appointments</a></li>
+                              <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
                               <li><a href="news.php">news</a></li>
-                              <li><a href="doctores.php">doctores</a></li>
+                              <li><a href="about.php">About</a></li>
                               <li><a href="contact.php">Contact </a></li>
                            </ul>
                            <button class="nav-toggler">
