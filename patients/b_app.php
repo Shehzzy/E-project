@@ -70,6 +70,11 @@
       <div class="coronata">
          <div class="container">
             <div class="row">
+
+
+               <!-- SIDE PANEL START  -->
+
+
             <div class="col-lg-2 col-md-3 col-sm-3">
                 <aside>
                   <br>
@@ -90,10 +95,78 @@
                     <br>
                 </aside>
             </div>
+             <!-- SIDE PANEL END  -->
+
             <div class="col-lg-8 col-md-8 col-sm-10 ml-5">
                <h2 class="text-uppercase">Book an Appointment</h2>
                <br>
                <br>
+               <form action="">
+
+               <div class="mb-3 mt-3">
+      <label for="email">Name:</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+    </div>
+               
+               <div class="mb-3 mt-3">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="mb-3">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    </div>
+    <div class="mb-3">
+      <label for="pwd">Phone Number:</label>
+      <input type="phone number" class="form-control" id="pwd" placeholder="Enter phone number" name="pswd">
+    </div>
+    <div class="mb-3">
+    <label for="pwd">Hospital Name</label>
+    <br>
+    <select class="form-select" aria-label="Default select example">
+    <option selected>Select Hospital</option>
+    <option value="1">Aga Khan Hospital</option>
+    <option value="2">Laquaid National Hospital </option>
+    <option value="3">Al Khidmat Hospital</option>
+    <option value="4">Dow Hospital</option>
+    <option value="5"></option>
+    <option value="6"></option>
+
+    </select>
+    </div>
+    
+    <div class="mb-3">
+    <label for="pwd">Vaccine Name</label>
+    <br>
+    <select class="form-select" aria-label="Default select example">
+    <option selected>Select Vaccine</option>
+    <option value="1">Pfizer–BioNTech</option>
+    <option value="2">Moderna</option>
+    <option value="3">CanSino</option>
+    <option value="4">Sinovac</option>
+    <option value="5">Sinopharm</option>
+
+    </select>
+    </div>
+
+    
+<div class='col-lg-9'>
+ 
+<div class="form-group">
+ 
+<label for="dtpickerdemo" class="col-sm-2 control-label">Select date/time:</label>
+     
+    <div class="mb-3 mt-5 text-center">
+    <button type="button" class="btn btn-danger">Book Now</button>
+    </div>
+
+
+
+
+
+   
+
+               </form>
 
             </div>
                </div>
