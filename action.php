@@ -81,7 +81,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage text_align_center ">
-                     <h2>Take Aaction</h2>
+                     <h2>Take Action</h2>
                      <p>making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful</p>
                   </div>
                </div>
