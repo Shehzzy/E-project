@@ -14,6 +14,38 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+<header class="header-area">
+            <div class="left">
+               <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+            </div>
+            <div class="right">
+               <a href="u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
+            </div>
+            <div class="container">
+               <div class="row d_flex">
+                  <div class="col-sm-3 logo_sm">
+                     <div class="logo">
+                        <a href="../index.php"></a>
+                     </div>
+                  </div>
+                  <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
+                     <div class="navbar-area">
+                        <nav class="site-navbar">
+                           <ul>
+                           <li><a class="active" href="index.php">Home</a></li>
+                              <li><a href="hospitals.php">Hospitals</a></li>
+                              <li><a href="action.php">Take action</a></li>
+                              <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
+                              <li><a href="news.php">news</a></li>
+                              <li><a href="about.php">About Us</a></li>
+                              <li><a href="contact.php">Contact Us </a></li>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
     <div style="background-color: papayawhip; height: 870px;">
         <br>
     <div style="background-color:peru; width: 1000px; margin-left: 400px; margin-top:100px; border-radius: 20px;" >

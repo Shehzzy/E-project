@@ -56,13 +56,13 @@
                      <div class="navbar-area">
                         <nav class="site-navbar">
                         <ul>
-                              <li><a href="index.php">Home</a></li>
-                              <li><a href="about.php">About</a></li>
-                              <li><a href="action.php">take action</a></li>
+                        <li><a class="active" href="index.php">Home</a></li>
+                              <li><a href="hospitals.php">Hospitals</a></li>
+                              <li><a href="action.php">Take action</a></li>
                               <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
-                              <li><a class="active" href="news.php">news</a></li>
-                              <li><a href="doctores.php">doctores</a></li>
-                              <li><a href="contact.php">Contact </a></li>
+                              <li><a href="news.php">news</a></li>
+                              <li><a href="about.php">About Us</a></li>
+                              <li><a href="contact.php">Contact Us </a></li>
                            </ul>
                            <button class="nav-toggler">
                            <span></span>
@@ -93,10 +93,10 @@
                            <input class="contactus" placeholder="Full Name" type="type" name=" Name"> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone" type="type" name="Phone Number">                          
+                           <input class="contactus" placeholder="Email" type="type" name="Email Address">                          
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                           <input class="contactus" placeholder="Phone" type="type" name="Phone Number"> 
                         </div>
                         <div class="col-md-12">
                            <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>

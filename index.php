@@ -53,11 +53,11 @@
                         <ul>
                               <li><a class="active" href="index.php">Home</a></li>
                               <li><a href="hospitals.php">Hospitals</a></li>
-                              <li><a href="action.php">Appointments</a></li>
+                              <li><a href="action.php">Take action</a></li>
                               <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
                               <li><a href="news.php">news</a></li>
-                              <li><a href="about.php">About</a></li>
-                              <li><a href="contact.php">Contact </a></li>
+                              <li><a href="about.php">About Us</a></li>
+                              <li><a href="contact.php">Contact Us </a></li>
                            </ul>
                            <button class="nav-toggler">
                            <span></span>
@@ -149,7 +149,7 @@
                    <div class="col-md-7">
                   <div class="titlepage text_align_left">
                      <h2>About Corona Virus </h2>
-                     <p>English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for
+                     <p>Corona Virus which is commonly known as COVID-19 is an infectious disease that causes illness in the respiratory system in humans. The term Covid 19 is sort of an acronym, derived from “Novel Corona Virus Disease 2019”. Corona Virus has affected our day to day life. This pandemic has affected millions of peoples, who are either sick or are being killed due to the spread of this disease.
                      </p>
                      <a class="read_more" href="about.php">About More</a>
                   </div>
