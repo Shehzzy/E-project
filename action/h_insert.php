@@ -11,12 +11,11 @@ if(isset($_POST['register'])){
     $region=$_POST['region'];
    
 
-    include '../config/db_connection.php';
+    include '../config/db.php';
     //make connection with database. 4 paramater server name,db user_name, db password, db name
     
-    //variable that store query as a string
     $query="INSERT INTO `hospital`( `name`, `email`, `password`, `address`, `cont_number`, `city`, `region`)
-     VALUES ('$user_name','$user_email','$user_pswd','$address','$number','$city','$sregion')";
+     VALUES ('$user_name','$user_email','$user_pswd','$address','$number','$city','$region')";
     
     //execute or run query on database connection
     $result=mysqli_query($conn,$query);
@@ -26,13 +25,13 @@ if(isset($_POST['register'])){
 
         echo "<script>
         alert('Congratulation you have successfully Registered!');
-        window.location='../index.php';
+        window.location='../hospital/h_login.php';
         </script>";
     }
     else{
         echo "<script>
         alert(' you are not successfully Registered!');
-        window.location='../register.php';
+        window.location='../hospital/h_register.php';
         </script>";
     }
 

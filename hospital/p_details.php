@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -101,13 +105,16 @@
                <h2 class="text-uppercase">All Patient Details</h2>
                <br>
                <br>
-               <table class="table">
+               <table class="table table-bordered">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Contact</th>
+      <th>Medical record</th>
+      
     </tr>
   </thead>
   <tbody>

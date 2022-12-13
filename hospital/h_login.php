@@ -71,11 +71,7 @@
            <div class="col-lg-6 col-md-6 col-sm-6 mb-5">
             <div class="form">
                <h4 class="mt-5 mb-5 text-center">Login to view your data</h4>
-            <form action="" method="post">
-               <label for="name">Hospital Name</label>
-               <br>
-               <input type="text" name="l_name" id="patient" required>
-               <br>
+            <form method="post">
                <label for="email">Email</label>
                <br>
                <input type="email" name="l_email" id="email" required>
@@ -85,7 +81,7 @@
                <input type="password" name="l_pass" id="pass" required>
                <br>
                <div class="text-center">
-                  <a href="" class="btn btn-danger btnn mt-4 text-center mr-5"><button name="login" type="submit"></button>Continue</a>
+               <button type="submit" class="btn btn-danger" name='login'>Continue</button>
                </div>
               </form>
             </div>
@@ -95,7 +91,36 @@
       </div>
       
       <!-- end coronata -->
+<?php
 
+if(isset($_POST['login'])){
+   // $user_id = $_POST['id'];
+   // $l_name = $_POST['l_name'];
+    $email=$_POST['l_email'];
+    $pass=$_POST['l_pass'];
+
+    include '../config/db.php';
+
+    $query="SELECT * FROM `hospital` WHERE `email`='$email' and `password`='$pass'";
+    $result=mysqli_query($conn,$query);
+         $count=mysqli_num_rows($result);
+    
+    if($count>0){
+      $row=mysqli_fetch_assoc($result);
+        $_SESSION['id']=$row['id'];
+        echo "<script>
+        alert('Congratulation you have successfully login!');
+        window.location='../hospital/p_details.php';
+        </script>";
+    }
+    else{
+        echo "<script>
+        alert(' you are not logged in!');
+        window.location='h_login.php';
+        </script>";
+    }}
+
+ ?>
 
 
 

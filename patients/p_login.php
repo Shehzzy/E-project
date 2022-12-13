@@ -75,9 +75,9 @@ session_start();
             <div class="form">
                <h4 class="mt-5 mb-5 text-center">Login to view your profile</h4>
             <form method="post">
-               <label for="name">Patient ID</label>
+               <!-- <label for="name">Patient ID</label>
                <br>
-               <input type="text" name="id" id="patient" required>
+               <input type="text" name="id" id="patient" required> -->
                <br>
                <label for="email">Email</label>
                <br>
@@ -104,18 +104,20 @@ session_start();
       <?php
 
 if(isset($_POST['login'])){
-   $user_id = $_POST['id'];
-   $l_name = $_POST['l_name'];
+   // $user_id = $_POST['id'];
+   // $l_name = $_POST['l_name'];
     $email=$_POST['l_email'];
     $pass=$_POST['l_pass'];
 
     include '../config/db.php';
 
-    $query="SELECT * FROM `patients` WHERE  `email`='$email' and `pass`='$pass'";
+    $query="SELECT * FROM `patient` WHERE `email`='$email' and `password`='$pass'";
     $result=mysqli_query($conn,$query);
-    $count=mysqli_fetch_assoc($result);
+         $count=mysqli_num_rows($result);
+    
     if($count>0){
-        $_SESSION['id']=$user_id;
+      $row=mysqli_fetch_assoc($result);
+        $_SESSION['id']=$row['id'];
         echo "<script>
         alert('Congratulation you have successfully login!');
         window.location='profile.php';

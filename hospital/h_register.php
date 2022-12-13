@@ -67,64 +67,61 @@
      
      <!-- coronata -->
       <div class="coronata">
-         <div class="container">
-            <div class="row">
-            <h1 class="mt-5 ml-3">Register as a hospital</h1>
-
-            <div class= "col-lg-7 col-md-7 col-sm-7">
-            <form action="" method="post" enctype="multipart/form-data">
-         <div class="form-group">
-         <label for="f_name">First Name</label>
-         <input type="text" class="form-control" placeholder="Enter your first name" id="f_name" name="f_name">
-         </div>
-         <div class="form-group">
-         <label for="l_name">Last Name</label>
-         <input type="text" class="form-control" placeholder="Enter your last name" id="l_name" name="l_name">
-         </div>
-         <div class="form-group">
-         <label for="email">Email Address</label>
-         <input type="text" class="form-control"  id="email" name="email" placeholder="Enter your email address">
-         </div>
-         <div class="form-group">
-         <label for="pass">Password</label>
-         <input type="password" class="form-control"  id="pass" name="pass" placeholder="Enter your password">
-         </div>
-         <div class="form-group">
-         <label for="age">Age</label>
-         <input type="number" class="form-control" placeholder="Enter your age" id="age" name="age">
-         </div>
-         <div class="form-group">
-         <label for="gender">Gender</label>
-         <br>
-         <select name="gender" id="gender">
-            <option value="">Select your Gender</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-         </select>
-         </div>
-  </div>
-  <div class="col-lg-5 col-md-5 col-sm-6">
+      <div class="container">
+      <h1 class="mt-5 ml-3">Register as a hospital</h1>
+  <form action="../action/h_insert.php" method="post" enctype='multipart/form-data'>
     <div class="form-group">
-         <label for="dob">Enter your Date of Birth</label>
-         <input type="date" class="form-control"  id="dob" name="dob">
-         </div>
-         <div class="form-group">
-         <label for="address">Full Address</label>
-         <input type="text" class="form-control" placeholder="Enter your full address" id="add" name="add">
-         </div>
-         <div class="form-group">
-         <label for="number">Mobile Number </label>
-         <input type="text" class="form-control" placeholder="Enter your mobile number" id="num" name="num">
-         </div>
-  <img src="../images/h_reg.png" alt="hospital img " class="ml-5 mt-5" />
-  </div>
-  </div>
-  <div class="text-center text-white">
+      <label for="email">Name:</label>
+      <input type="text" class="form-control" id="email" placeholder="Enter email" name="user_name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="user_email">
+    </div>
+    
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="user_pswd">
+    </div>
+    <div class="form-group">
+      <label for="email">Address:</label>
+      <input type="text" class="form-control" id="address" placeholder="Enter address" name="address">
+    </div>
+  
+    <div class="form-group">
+      <label for="email">Contact Number:</label>
+      <input type="number" class="form-control" id="number" placeholder="Enter contact number" name="cont_number">
+    </div>
+  
+    <div class="form-group">
+      <label for="email">City</label>
+      <br>
+    <select name="city">
+      <option value="0">Select City</option>
+      <option value="karachi">karachi</option>
+      <option value="lahore">lahore</option>
+      <option>
+</select>
+    </div>
+<div>
+
+<div class="form-group">
+      <label for="email">Region</label>
+      <br>
+    <select name="city">
+      <option value="0">Select Region</option>
+      <option value="Malir">Malir</option>
+      <option value="PECHS">PECHS</option>
+      <option>
+</select>
+</div>
+</div>
+<div class="text-center text-white">
   <button type="submit" class="btn btn-danger mt-5 mb-5" name="register">Register now </button>
   <br>
   <a href="h_login.php" class="btn">Already have an account? Login now</a>
   </form>
-  </div>
+</div>
       </div>
       </div>
       

@@ -104,7 +104,7 @@ session_start();
 
 
             <div class="col-lg-4 col-md-4 col-sm-4 ml-5">
-               <h2 class="text-uppercase">My profile</h2>
+               <h2 class="text-uppercase">My profile   </h2>
                <br>
                <img src="../images/profile.jpeg" alt="">
                <br>
@@ -117,18 +117,24 @@ session_start();
               <?php
               $id = $_SESSION['id'];
               include '../config/db.php';
-              $query = "SELECT * FROM `patients` WHERE `id`=.$id";
+              $query = "SELECT * FROM `patient` WHERE id =$id";
               $result=mysqli_query($conn,$query);
               while ($row = mysqli_fetch_assoc($result)){
               ?>
               <h6>PATIENT NAME</h6>
                <p><?php echo $row['f_name'];?></p>
                <p><?php echo $row['l_name']; ?></p>
+               <h6>PATIENT EMAIL</h6>
                <p><?php echo $row['email']; ?></p>
+               <h6>PATIENT EMAIL</h6>
                <p><?php echo $row['age']; ?></p>
+               <h6>PATIENT EMAIL</h6>
                <p><?php echo $row['gender']; ?></p>
+               <h6>PATIENT EMAIL</h6>
                <p><?php echo $row['dob']; ?></p>
+               <h6>PATIENT EMAIL</h6>
                <p><?php echo $row['address']; ?></p>
+               <h6>PATIENT EMAIL</h6>
                <p><?php echo $row['m_num']; ?></p>
 
                <?php

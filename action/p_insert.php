@@ -1,7 +1,5 @@
 <?php
-session_start();
 if(isset($_POST['register'])){
-    $user_id = $_POST['user_id'];
     $f_name=$_POST['f_name'];
     $l_name=$_POST['l_name'];
     $email=$_POST['email'];
@@ -12,15 +10,15 @@ if(isset($_POST['register'])){
     $address=$_POST['add'];
     $m_num=$_POST['num'];
 
-    // include '../config/db.php';
+    
 
     include '../config/db.php';
 
 
-    $query="INSERT INTO `patients`(`f_name`, `l_name`, `email`, `pass`, `age`, `gender`, `dob`, `address`, `m_number`) VALUES('$f_name','$l_name','$email','$password','$age','$gender','$dob','$address','$m_num')";
+    $query="INSERT INTO `patient`(`f_name`, `l_name`, `email`, `password`, `age`, `gender`, `dob`, `address`, `m_num`) VALUES(
+        '$f_name','$l_name','$email','$password','$age','$gender','$dob','$address','$m_num')";
    $result=mysqli_query($conn,$query);
    if($result){ 
-    $_SESSION['f_name']=$f_name;
        echo "<script>
        alert('Congratulation you have successfully Registered!');
        window.location='../patients/p_login.php';
