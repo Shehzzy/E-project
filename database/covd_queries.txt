@@ -1,0 +1,7 @@
+SELECT patient.f_name,hospital.name,appointments.* FROM `appointments` 
+INNER JOIN patient ON appointments.pat_id=patient.id
+INNER JOIN hospital ON appointments.hosp_id=hospital.id WHERE hospital.id=1;
+
+SELECT patient.f_name,hospital.name,appointments.* FROM `appointments` 
+INNER JOIN patient ON appointments.pat_id=patient.id
+INNER JOIN hospital ON appointments.hosp_id=hospital.id WHERE patient.id=2;
