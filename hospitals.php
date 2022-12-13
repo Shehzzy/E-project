@@ -31,11 +31,7 @@
    </head>
    <!-- body -->
    <body class="main-layout inner_page">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
-      </div>
-      <!-- end loader -->
+    
       <!-- top -->
                     <!-- header -->
          <header class="header-area">
@@ -101,9 +97,9 @@
               </div>
             </div>
             <div class="card">
-              <img src="images/pak international hospital.jpg" class="" height="400px" width="570px" alt="..." style="margin-left: 0px;">
+              <img src="images/pak international hospital.jpg" class="" height="550px" width="570px" alt="..." style="margin-left: 0px;">
               <div class="card-body">
-                <h1 class="card-title" style="font-size: 2.5em; text-align: center;">Pak Internattional Hospital</h1>
+                <h1 class="card-title" style="font-size: 2.5em; text-align: center;">Pak International Hospital</h1>
                 <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;">DETAILS </button>
               
               </div>
@@ -113,7 +109,7 @@
             <br>
           <div class="card-deck">
             <div class="card">
-              <img src="images/patel hospital.jpg" class="" height="300px" width="570px" alt="..." style="margin-left: 0px;">
+              <img src="images/patel hospital.jpg" class="" height="270px" width="570px" alt="..." style="margin-left: 0px;">
               <div class="card-body">
                 <h1 class="card-title" style="font-size: 3em; text-align: center;">Patel Hospital</h1>
                 

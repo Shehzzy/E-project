@@ -76,7 +76,7 @@ session_start();
             <h1 class="mt-5 ml-3">Register as a patient</h1>
 
             <div class= "col-lg-7 col-md-7 col-sm-7">
-            <form action="../action/p_insert.php" method="post" enctype="multipart/form-data">
+            <form action="../p_action/p_insert.php" method="post" enctype="multipart/form-data">
          <div class="form-group">
          <label for="f_name">First Name</label>
          <input type="text" class="form-control" placeholder="Enter your first name" id="f_name" name="f_name">

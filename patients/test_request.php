@@ -1,7 +1,4 @@
-<?php
-session_start();
-include "../config/db.php";
-?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -127,59 +124,38 @@ include "../config/db.php";
                <label for="pwd">Phone Number:</label>
                <input type="number" class="form-control" id="pwd" placeholder="Enter phone number" name="p_num">
             </div>
+          <div class="form-check,mb-3">
 
-            <!-- HOSPITAL DROPDOWN COMING FROM DATABASE PHP -->
+          <label for="pwd">Is The Patient Undergoing Dialysis?</label>
+          </div>
+          <div class="ml-4">
+          <input type="radio" class="form-check-input" id="yes" name="yes" value="yes" checked>YES
+          </div>
+          <div class="ml-4">
+          <input type="radio" class="form-check-input" id="no" name="no" value="no" checked>NO
+          </div>
+          <br>
+          <div class="mb-3">
+          <label for="date">Date When Symtoms First Appeared?</label>
+               <input type="date" class="form-control" name="date">
+            </div>
 
-            <?php
-            include '../config/db.php';
-            $query = "SELECT `id`,`name` FROM `hospital`";
-            $result = mysqli_query($conn, $query);
-            if($result->num_rows>0){
-               $row=mysqli_fetch_all($result,MYSQLI_ASSOC);
-            }
-               ?>
-                  <div class="mb-3">
-                  <label for="pwd">Hospital Names</label>
-                  <br>
-                  <select class="form-select" aria-label="Default select example" name="hospital">
-                  <option value="selected">Select Hospital</option>
-                  <?php 
-                  foreach ($row as $rows) {
-                  ?>
-                     <option><?php echo$rows['id']."- ".$rows['name']; ?> </option>
-                     <?php 
-                     }
-                     ?>
-                  </select>
-                  </div>
+            <div class="form-check,ml-4">
+            <label for="symtoms">What Are The Symptoms You're Currently Facing?</label>
+            </div>
+            <div class="ml-5">
+         <input class="form-check-input" type="checkbox" id="fever" name="fever" value="fever" checked>
+         <label class="form-check-label">Fever</label>
+        </div>
+        <div class="ml-5">
+         <input class="form-check-input" type="checkbox" id="bodyache" name="bodyache" value="bodyache" checked>
+         <label class="form-check-label">Bodyache</label>
+        </div>
+
 
                    <!-- VACCINE DROPDOWN COMING FROM DATABASE PHP -->
-
-            <?php
-            include '../config/db.php';
-            $query = "SELECT `id`,`V_name` FROM `vaccine`";
-            $result = mysqli_query($conn, $query);
-            if($result->num_rows>0){
-               $row=mysqli_fetch_all($result,MYSQLI_ASSOC);
-            }
-               ?>
-                  <div class="mb-3">
-                  <label for="pwd">Vaccine Name</label>
-                  <br>
-                  <select class="form-select" aria-label="Default select example" name="vaccine">
-                  <option value="selected">Select Vaccine</option>
-                  <?php 
-                  foreach ($row as $rows) {
-                  ?>
-                     <option><?php echo $rows['id']."- ".$rows['V_name']; ?> </option>
-                     <?php 
-                     }
-                     ?>
-                  </select>
-                  </div>
-
-
-                  <div class="mb-3 mt-3">
+                 
+                   <div class="mb-3 mt-3">
                <label for="date">Select date</label>
                <input type="date" class="form-control" name="date">
             </div>
@@ -274,4 +250,4 @@ include "../config/db.php";
       <script src="../js/owl.carousel.min.js"></script>
       <script src="../js/custom.js"></script>
    </body>
-</html>
+</htm
