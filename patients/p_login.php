@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -71,10 +74,10 @@
            <div class="col-lg-6 col-md-6 col-sm-6 mb-5">
             <div class="form">
                <h4 class="mt-5 mb-5 text-center">Login to view your profile</h4>
-            <form action="" method="post">
-               <label for="name">Patient Name</label>
+            <form method="post">
+               <label for="name">Patient ID</label>
                <br>
-               <input type="text" name="l_name" id="patient" required>
+               <input type="text" name="id" id="patient" required>
                <br>
                <label for="email">Email</label>
                <br>
@@ -85,7 +88,8 @@
                <input type="password" name="l_pass" id="pass" required>
                <br>
                <div class="text-center">
-                  <a href="" class="btn btn-danger btnn mt-4 text-center mr-5"><button name="login" type="submit"></button>Continue</a>
+               <button type="submit" class="btn btn-danger" name='login'>Continue</button>
+
                </div>
               </form>
             </div>
@@ -97,12 +101,40 @@
       <!-- end coronata -->
 
 
+      <?php
+
+if(isset($_POST['login'])){
+   $user_id = $_POST['id'];
+   $l_name = $_POST['l_name'];
+    $email=$_POST['l_email'];
+    $pass=$_POST['l_pass'];
+
+    include '../config/db.php';
+
+    $query="SELECT * FROM `patients` WHERE  `email`='$email' and `pass`='$pass'";
+    $result=mysqli_query($conn,$query);
+    $count=mysqli_fetch_assoc($result);
+    if($count>0){
+        $_SESSION['id']=$user_id;
+        echo "<script>
+        alert('Congratulation you have successfully login!');
+        window.location='profile.php';
+        </script>";
+    }
+    else{
+        echo "<script>
+        alert(' you are not logged in!');
+        window.location='p_login.php';
+        </script>";
+    }}
+
+?>
 
 
 
 
 
-
+    <!-- update -->
       <!--  footer -->
       <footer>
          <div class="footer">
@@ -112,13 +144,15 @@
                            <div class="hedingh3 text_align_left">
                               <h3>Resources</h3>
                               <ul class="menu_footer">
-                                 <li><a href="../index.php">Home</a><li>
+                                 <li><a href="index.php">Home</a><li>
                                  <li><a href="">What we do</a><li>
                                  <li> <a href="">Media</a><li>
                                  <li> <a href="">Travel Advice</a><li>
                                  <li><a href="">Protection</a><li>
                                  <li><a href="">Care</a><li>
                               </ul>
+                             
+           
                            </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
@@ -127,27 +161,36 @@
                               <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various</p>
                            </div>
                         </div>
+                     
+                
+                       
                         <div class="col-lg-3 col-md-6 col-sm-6">
                            <div class="hedingh3  text_align_left">
                               <h3>Contact  Us</h3>
-                              <ul class="top_infomation">
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>
-                                Making this the first true</li>
-                                <li><i class="fa fa-phone" aria-hidden="true"></i>
-                                Call : +01 1234567890 </li>
-                                <li><i class="fa fa-envelope" aria-hidden="true"></i>
-                                <a href="">Email : demo@gmail.com</a></li>
-                              </ul>  
-                           </div>
-                        </div>
-                     <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="hedingh3 text_align_left">
-                              <h3>countrys</h3>
-                           <div class="map">
-                              <img src="../images/map.png" alt="#"/>
-                           </div>
-                        </div>
+                                <ul class="top_infomation">
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                           Making this the first true  
+                        </li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>
+                           Call : +01 1234567890
+                        </li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                           <a href="">Email : demo@gmail.com</a>
+                        </li>
+                     </ul>
+                            
+                           
                      </div>
+                  </div>
+                     <div class="col-lg-4 col-md-6 col-sm-6">
+                           <div class="hedingh3 text_align_left">
+                              <h3>countrys</h3>
+                              <div class="map">
+                                <img src="images/map.png" alt="#"/>
+                              </div>
+                           </div>
+                        </div>
+                    
                </div>
             </div>
             <div class="copyright">

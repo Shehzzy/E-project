@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -8,7 +13,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Users</title>
+      <title>Patient Profile</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -70,15 +75,18 @@
       <div class="coronata">
          <div class="container">
             <div class="row">
-            <div class="col-lg-2 col-md-3 col-sm-3">
+
+               <!-- ASIDE PANEL START -->
+
+            <div class="col-lg-2 col-md-2 col-sm-2">
                 <aside>
                   <br>
                   <br>
                   <a href="profile.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My Profile</span></a>
                   <br>
-                    <a href="app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My appoinments</span></a>
+                  <a href="app.php?user_id=<?php echo $row['id'];?>" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My appoinments</span></a>
                     <br>
-                    <a href="b_app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
+                    <a href="b_app.php?user_id=<?php echo $row['id'];?>" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
                     <br>
                     <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request a Covid test</span></a>
                     <br>
@@ -90,18 +98,49 @@
                     <br>
                 </aside>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-10 ml-5">
+
+            <!-- ASIDE PANEL END -->
+            <!-- PROFILE WITH PHP START -->
+
+
+            <div class="col-lg-4 col-md-4 col-sm-4 ml-5">
                <h2 class="text-uppercase">My profile</h2>
                <br>
+               <img src="../images/profile.jpeg" alt="">
                <br>
-               <img src="" alt="" class="ml-5">
+               </div>
+               <div class="col-lg-3 col-md-3 col-sm-3 ml-5">
                <h4>Personal Information</h4>
+               <br>
+               <h6>PATIENT ID</h6>
+               <p><?php echo $_SESSION['id']; ?></p>
+              <?php
+              $id = $_SESSION['id'];
+              include '../config/db.php';
+              $query = "SELECT * FROM `patients` WHERE `id`=.$id";
+              $result=mysqli_query($conn,$query);
+              while ($row = mysqli_fetch_assoc($result)){
+              ?>
+              <h6>PATIENT NAME</h6>
+               <p><?php echo $row['f_name'];?></p>
+               <p><?php echo $row['l_name']; ?></p>
+               <p><?php echo $row['email']; ?></p>
+               <p><?php echo $row['age']; ?></p>
+               <p><?php echo $row['gender']; ?></p>
+               <p><?php echo $row['dob']; ?></p>
+               <p><?php echo $row['address']; ?></p>
+               <p><?php echo $row['m_num']; ?></p>
 
-            </div>
+               <?php
+              }
+               ?>
                </div>
             </div>
-      </div>
-      
+           
+            
+                        <!--PROFILE WITH PHP END  -->
+               </div>
+            </div>
       <!-- end coronata -->
 
 

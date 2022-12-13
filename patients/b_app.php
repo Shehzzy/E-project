@@ -1,3 +1,7 @@
+<?php 
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -101,10 +105,12 @@
                <h2 class="text-uppercase">Book an Appointment</h2>
                <br>
                <br>
-               <form action="">
+               <form action="../action/p_book.php" method="post">
 
                <div class="mb-3 mt-3">
+                  <input type="hidden" name="user_id" value="<?php echo $row['id'];?>">
       <label for="email">Name:</label>
+     
       <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
     </div>
                
@@ -113,27 +119,23 @@
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
     </div>
     <div class="mb-3">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-    </div>
-    <div class="mb-3">
       <label for="pwd">Phone Number:</label>
-      <input type="phone number" class="form-control" id="pwd" placeholder="Enter phone number" name="pswd">
+      <input type="phone number" class="form-control" id="pwd" placeholder="Enter phone number" name="p_num">
     </div>
     <div class="mb-3">
     <label for="pwd">Hospital Name</label>
     <br>
-    <select class="form-select" aria-label="Default select example">
+    <select class="form-select" aria-label="Default select example" name="hospital">
     <option selected>Select Hospital</option>
-    <option value="1">Al Khidmat Hospital</option>
-    <option value="2">A.0 Hospital</option>
-    <option value="3">Pak Internattional Hospital</option>
-    <option value="4">Patel Hospital</option>
-    <option value="5">Shifa Hospital</option>
-    <option value="6">Children Hospital</option>
-    <option value="6">Agha Khan Hospital</option>
-    <option value="6">Dow Hospital</option>
-    <option value="6">Liaquat National Hospital</option>
+    <option value="Al Khidmat Hospital">Al Khidmat Hospital</option>
+    <option value="A.0 Hospital">A.0 Hospital</option>
+    <option value="Pak Internattional Hospital">Pak Internattional Hospital</option>
+    <option value="Patel Hospital">Patel Hospital</option>
+    <option value="Shifa Hospital">Shifa Hospital</option>
+    <option value="Children Hospital">Children Hospital</option>
+    <option value="Agha Khan Hospital">Agha Khan Hospital</option>
+    <option value="Dow hospital">Dow Hospital</option>
+    <option value="Liaquat National Hospital">Liaquat National Hospital</option>
    
 
     </select>
@@ -142,13 +144,13 @@
     <div class="mb-3">
     <label for="pwd">Vaccine Name</label>
     <br>
-    <select class="form-select" aria-label="Default select example">
+    <select class="form-select" aria-label="Default select example" name="vaccine">
     <option selected>Select Vaccine</option>
-    <option value="1">Pfizer–BioNTech</option>
-    <option value="2">Moderna</option>
-    <option value="3">CanSino</option>
-    <option value="4">Sinovac</option>
-    <option value="5">Sinopharm</option>
+    <option value="Pfizer–BioNTech">Pfizer–BioNTech</option>
+    <option value="Moderna">Moderna</option>
+    <option value="CanSino">CanSino</option>
+    <option value="Sinovac">Sinovac</option>
+    <option value="Sinopharm">Sinopharm</option>
 
     </select>
     </div>
@@ -159,7 +161,7 @@
 <div class="form-group">
 <label for="pwd">Select Date</label>
 <br>
-<input type="date" name="" id="date">
+<input type="date" name="" name="date">
 </div>  
 
 <div class="mb-3">
@@ -167,11 +169,11 @@
 <div class="form-group">
 <label for="pwd">Select time</label>
 <br>
-<input type="time" name="" id="time">
+<input type="time" name="time" id="time">
 </div>   
 
 <div class="mb-3 mt-5 text-center">
-    <button type="button" class="btn btn-danger">Book Now</button>
+    <button type="button" class="btn btn-danger" name="book">Book Now</button>
     </div>
 
 

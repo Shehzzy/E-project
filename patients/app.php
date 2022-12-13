@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -76,9 +79,9 @@
                   <br>
                   <a href="profile.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My Profile</span></a>
                   <br>
-                    <a href="app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My appoinments</span></a>
+                    <a href="app.php?user_id=<?php echo $row['id'];?>" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My appoinments</span></a>
                     <br>
-                    <a href="b_app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
+                    <a href="b_app.php?user_id=<?php echo $row['id'] ?>" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
                     <br>
                     <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request a Covid test</span></a>
                     <br>
@@ -90,13 +93,26 @@
                     <br>
                 </aside>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-10 ml-5">
+            <div class="col-lg-8 col-md-8 col-sm-10 ml-5">
                <h2 class="text-uppercase">My Appointments</h2>
-               <br>
-               <br>
-               <p>no appointments to show</p>
-               <br>
-               <a href="">Click here to book an appointment</a>
+              <table class="table table=bordered">
+               <thead>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone number</th>
+                  <th>Preferred Hospital</th>
+                  <th>Preferred vaccine</th>
+                  <th>Date/Time</th>
+               </thead>
+               <tbody>
+               <?php
+              
+               ?>
+                </tbody>
+              </table>
+               <?php
+                 
+                ?>
 
             </div>
                </div>

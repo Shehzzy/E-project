@@ -1,3 +1,7 @@
+
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -72,7 +76,7 @@
             <h1 class="mt-5 ml-3">Register as a patient</h1>
 
             <div class= "col-lg-7 col-md-7 col-sm-7">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="../action/p_insert.php" method="post" enctype="multipart/form-data">
          <div class="form-group">
          <label for="f_name">First Name</label>
          <input type="text" class="form-control" placeholder="Enter your first name" id="f_name" name="f_name">
@@ -98,8 +102,8 @@
          <br>
          <select name="gender" id="gender">
             <option value="">Select your Gender</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
          </select>
          </div>
   </div>
