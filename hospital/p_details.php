@@ -103,6 +103,7 @@ session_start();
 
             <div class="col-lg-8 col-md-8 col-sm-10 ml-5">
                <h2 class="text-uppercase">All Patient Details</h2>
+               <h6><?php echo $_SESSION['id'];?></h6>
                <br>
                <br>
                <table class="table table-bordered">

@@ -15,7 +15,7 @@ if(isset($_POST['register'])){
     include '../config/db.php';
 
 
-    $query="INSERT INTO `patient`(`f_name`, `l_name`, `email`, `password`, `age`, `gender`, `dob`, `address`, `m_num`) VALUES(
+    $query="INSERT INTO `patients`(`f_name`, `l_name`, `email`, `pass`, `age`, `gender`, `dob`, `address`, `m_number`) VALUES(
         '$f_name','$l_name','$email','$password','$age','$gender','$dob','$address','$m_num')";
    $result=mysqli_query($conn,$query);
    if($result){ 

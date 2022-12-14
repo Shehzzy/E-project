@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start();
-
+include "../config/db.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +41,7 @@ session_start();
                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
-               <a href="u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
+               <a href="../u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
             <div class="container">
                <div class="row d_flex">
@@ -106,75 +106,94 @@ session_start();
                <br>
                <br>
                <form action="../action/p_book.php" method="post">
+              
+               <div class="mb-3 mt-3">
+               <label for="id">PATIENT ID</label>
+            
+               <input type="number" name="user_id"  class="form-control" value="<?php echo $_SESSION['id'];?>">
+            </div>
 
                <div class="mb-3 mt-3">
-                  <input type="hidden" name="user_id" value="<?php echo $row['id'];?>">
-      <label for="email">Name:</label>
-     
-      <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
-    </div>
-               
-               <div class="mb-3 mt-3">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-    </div>
-    <div class="mb-3">
-      <label for="pwd">Phone Number:</label>
-      <input type="phone number" class="form-control" id="pwd" placeholder="Enter phone number" name="p_num">
-    </div>
-    <div class="mb-3">
-    <label for="pwd">Hospital Name</label>
-    <br>
-    <select class="form-select" aria-label="Default select example" name="hospital">
-    <option selected>Select Hospital</option>
-    <option value="Al Khidmat Hospital">Al Khidmat Hospital</option>
-    <option value="A.0 Hospital">A.0 Hospital</option>
-    <option value="Pak Internattional Hospital">Pak Internattional Hospital</option>
-    <option value="Patel Hospital">Patel Hospital</option>
-    <option value="Shifa Hospital">Shifa Hospital</option>
-    <option value="Children Hospital">Children Hospital</option>
-    <option value="Agha Khan Hospital">Agha Khan Hospital</option>
-    <option value="Dow hospital">Dow Hospital</option>
-    <option value="Liaquat National Hospital">Liaquat National Hospital</option>
-   
+               <label for="email">Name:</label>
+            
+               <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+            </div>
+                        
+                        <div class="mb-3 mt-3">
+               <label for="email">Email:</label>
+               <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="mb-3">
+               <label for="pwd">Phone Number:</label>
+               <input type="number" class="form-control" id="pwd" placeholder="Enter phone number" name="p_num">
+            </div>
 
-    </select>
-    </div>
-    
-    <div class="mb-3">
-    <label for="pwd">Vaccine Name</label>
-    <br>
-    <select class="form-select" aria-label="Default select example" name="vaccine">
-    <option selected>Select Vaccine</option>
-    <option value="Pfizer–BioNTech">Pfizer–BioNTech</option>
-    <option value="Moderna">Moderna</option>
-    <option value="CanSino">CanSino</option>
-    <option value="Sinovac">Sinovac</option>
-    <option value="Sinopharm">Sinopharm</option>
+            <!-- HOSPITAL DROPDOWN COMING FROM DATABASE PHP -->
 
-    </select>
-    </div>
+            <?php
+            include '../config/db.php';
+            $query = "SELECT `id`,`name` FROM `hospital`";
+            $result = mysqli_query($conn, $query);
+            if($result->num_rows>0){
+               $row=mysqli_fetch_all($result,MYSQLI_ASSOC);
+            }
+               ?>
+                  <div class="mb-3">
+                  <label for="pwd">Hospital Names</label>
+                  <br>
+                  <select class="form-select" aria-label="Default select example" name="hospital">
+                  <option value="selected">Select Hospital</option>
+                  <?php 
+                  foreach ($row as $rows) {
+                  ?>
+                     <option><?php echo$rows['id']."- ".$rows['name']; ?> </option>
+                     <?php 
+                     }
+                     ?>
+                  </select>
+                  </div>
 
-    
-<div class="mb-3">
- 
-<div class="form-group">
-<label for="pwd">Select Date</label>
-<br>
-<input type="date" name="" name="date">
-</div>  
+                   <!-- VACCINE DROPDOWN COMING FROM DATABASE PHP -->
 
-<div class="mb-3">
- 
-<div class="form-group">
-<label for="pwd">Select time</label>
-<br>
-<input type="time" name="time" id="time">
-</div>   
+            <?php
+            include '../config/db.php';
+            $query = "SELECT `id`,`V_name` FROM `vaccine`";
+            $result = mysqli_query($conn, $query);
+            if($result->num_rows>0){
+               $row=mysqli_fetch_all($result,MYSQLI_ASSOC);
+            }
+               ?>
+                  <div class="mb-3">
+                  <label for="pwd">Vaccine Name</label>
+                  <br>
+                  <select class="form-select" aria-label="Default select example" name="vaccine">
+                  <option value="selected">Select Vaccine</option>
+                  <?php 
+                  foreach ($row as $rows) {
+                  ?>
+                     <option><?php echo $rows['id']."- ".$rows['V_name']; ?> </option>
+                     <?php 
+                     }
+                     ?>
+                  </select>
+                  </div>
 
-<div class="mb-3 mt-5 text-center">
-    <button type="button" class="btn btn-danger" name="book">Book Now</button>
-    </div>
+
+                  <div class="mb-3 mt-3">
+               <label for="date">Select date</label>
+               <input type="date" class="form-control" name="date">
+            </div>
+
+            <div class="mb-3 mt-3">
+               <label for="Select Time">Select Time</label>
+               <input type="time" class="form-control" id="email"  name="time">
+            </div>
+                  </div>
+               </div>
+
+         <div class="mb-3 mt-5 text-center">
+            <button type="submit" class="btn btn-danger" name="book">Book Now</button>
+            </div>
 
 
 
@@ -186,8 +205,6 @@ session_start();
 
             </div>
                </div>
-            </div>
-      </div>
       
       <!-- end coronata -->
       

@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -84,9 +83,9 @@ session_start();
                   <br>
                   <a href="profile.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My Profile</span></a>
                   <br>
-                  <a href="app.php?user_id=<?php echo $row['id'];?>" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My appoinments</span></a>
+                  <a href="app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My appoinments</span></a>
                     <br>
-                    <a href="b_app.php?user_id=<?php echo $row['id'];?>" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
+                    <a href="b_app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
                     <br>
                     <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request a Covid test</span></a>
                     <br>
@@ -95,6 +94,9 @@ session_start();
                     <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Results</span></a>
                     <br>
                     <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Reports</span></a>
+                    <br>
+                    <br>
+                    <a href="p_out.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Logout</span></a>
                     <br>
                 </aside>
             </div>
@@ -106,36 +108,44 @@ session_start();
             <div class="col-lg-4 col-md-4 col-sm-4 ml-5">
                <h2 class="text-uppercase">My profile   </h2>
                <br>
-               <img src="../images/profile.jpeg" alt="">
+               <img src="../images/profile.jpeg" alt="profile image" height="100px" width="60%">
                <br>
                </div>
                <div class="col-lg-3 col-md-3 col-sm-3 ml-5">
                <h4>Personal Information</h4>
                <br>
-               <h6>PATIENT ID</h6>
+               <h6 class="font-weight-bold">PATIENT ID</h6>
                <p><?php echo $_SESSION['id']; ?></p>
+               <br>
               <?php
               $id = $_SESSION['id'];
               include '../config/db.php';
-              $query = "SELECT * FROM `patient` WHERE id =$id";
+              $query = "SELECT * FROM `patients` WHERE id =$id";
               $result=mysqli_query($conn,$query);
               while ($row = mysqli_fetch_assoc($result)){
               ?>
-              <h6>PATIENT NAME</h6>
-               <p><?php echo $row['f_name'];?></p>
-               <p><?php echo $row['l_name']; ?></p>
-               <h6>PATIENT EMAIL</h6>
+              <h6 class="font-weight-bold">PATIENT NAME</h6>
+               <p><?php echo $row['f_name']. " ".$row['l_name'];?></p>
+               <br>
+               <h6 class="font-weight-bold">PATIENT EMAIL</h6>
                <p><?php echo $row['email']; ?></p>
-               <h6>PATIENT EMAIL</h6>
+               <br>
+               <h6 class="font-weight-bold">PATIENT AGE</h6>
                <p><?php echo $row['age']; ?></p>
-               <h6>PATIENT EMAIL</h6>
+               <br>
+               <h6 class="font-weight-bold">PATIENT GENDER</h6>
                <p><?php echo $row['gender']; ?></p>
-               <h6>PATIENT EMAIL</h6>
+               <br>
+               <h6 class="font-weight-bold">PATIENT DATE OF BIRTH</h6>
                <p><?php echo $row['dob']; ?></p>
-               <h6>PATIENT EMAIL</h6>
+               <h6 class="font-weight-bold">PATIENT ADDRESS</h6>
                <p><?php echo $row['address']; ?></p>
-               <h6>PATIENT EMAIL</h6>
-               <p><?php echo $row['m_num']; ?></p>
+               <br>
+               <h6 class="font-weight-bold">PATIENT PHONE NUMBER</h6>
+               <p><?php echo $row['m_number']; ?></p>
+               <br>
+               <a href="update_form.php?user_id=<?php echo $_SESSION['id'];?>"><button class="btn btn-success">Update</button></a>
+               <a href="../p_action/d_user.php?user_id=<?php echo $_SESSION['id'];?>"><button class="btn btn-danger">Delete</button></a>
 
                <?php
               }

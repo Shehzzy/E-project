@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "../config/db.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,9 +80,9 @@ session_start();
                   <br>
                   <a href="profile.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My Profile</span></a>
                   <br>
-                    <a href="app.php?user_id=<?php echo $row['id'];?>" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My appoinments</span></a>
+                    <a href="app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My appoinments</span></a>
                     <br>
-                    <a href="b_app.php?user_id=<?php echo $row['id'] ?>" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
+                    <a href="b_app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
                     <br>
                     <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request a Covid test</span></a>
                     <br>
@@ -93,26 +94,64 @@ session_start();
                     <br>
                 </aside>
             </div>
-            <div class="col-lg-8 col-md-8 col-sm-10 ml-5">
+            <div class="col-lg-10 col-md-10 col-sm-10">
                <h2 class="text-uppercase">My Appointments</h2>
+               <br>
+               <h5><?php echo"PATIENT ID ".$_SESSION['id'];?></h5>
+               <br>
+               <br>
               <table class="table table=bordered">
                <thead>
+                  <th>ID</th>
                   <th>Name</th>
-                  <th>Email</th>
                   <th>Phone number</th>
                   <th>Preferred Hospital</th>
                   <th>Preferred vaccine</th>
-                  <th>Date/Time</th>
+                  <th>Selected Date</th>
+                  <th>Selected Time</th>
+                  <th>Status</th>
                </thead>
                <tbody>
                <?php
-              
+               $id = $_SESSION['id'];
+               include '../config/db.php';
+               $query = "SELECT patients.id,hospital.id,vaccine.Id,bookings.* FROM `bookings` 
+               INNER JOIN patients ON bookings.p_id=patients.id
+               INNER JOIN vaccine ON bookings.v_id=vaccine.Id
+               INNER JOIN hospital ON bookings.hos_id=hospital.id WHERE patients.id=$id";
+
+               
+               $result = mysqli_query($conn, $query);
+               while($row=mysqli_fetch_assoc($result)){
+                  if($row['status']==0){
+                     echo $status="pending";
+
+               }
+               else if($row['status']==1){
+                  echo $status="Booked";
+               }
+               else if($row['status']==2){
+                  echo $status="rejected";
+               }
+               
                ?>
-                </tbody>
-              </table>
+               <tr>
+                  <td><?php echo $row['p_id'];?></td>
+                  <td><?php echo $row['P_name'];?></td>
+                  <td><?php echo $row['number'];?></td>
+                  <td><?php echo $row['hos_id'];?></td>
+                  <td><?php echo $row['v_id'];?></td>
+                  <td><?php echo $row['selected_date'];?></td>
+                  <td><?php echo $row['selected_time'];?></td>
+                  <td><?php echo $status;?></td>
+                  
+               </tr>
                <?php
-                 
+
+               }
                 ?>
+                 </tbody>
+              </table>
 
             </div>
                </div>

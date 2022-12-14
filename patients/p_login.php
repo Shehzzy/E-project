@@ -104,14 +104,12 @@ session_start();
       <?php
 
 if(isset($_POST['login'])){
-   // $user_id = $_POST['id'];
-   // $l_name = $_POST['l_name'];
     $email=$_POST['l_email'];
     $pass=$_POST['l_pass'];
 
     include '../config/db.php';
 
-    $query="SELECT * FROM `patient` WHERE `email`='$email' and `password`='$pass'";
+    $query="SELECT * FROM `patients` WHERE `email`='$email' and `pass`='$pass'";
     $result=mysqli_query($conn,$query);
          $count=mysqli_num_rows($result);
     
