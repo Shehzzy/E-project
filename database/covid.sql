@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2022 at 08:08 PM
+-- Generation Time: Dec 15, 2022 at 08:54 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -60,7 +60,9 @@ CREATE TABLE `bookings` (
 --
 
 INSERT INTO `bookings` (`id`, `P_name`, `email`, `number`, `p_id`, `hos_id`, `v_id`, `selected_date`, `selected_time`, `status`, `created_at`) VALUES
-(1, 'Zoya', 'zoya@gmail.com', '213131', 7, 1, 1, '2022-12-13', '12:37:00', 1, '2022-12-13 18:37:41');
+(1, 'Zoya', 'zoya@gmail.com', '213131', 7, 1, 1, '2022-12-13', '12:37:00', 1, '2022-12-13 18:37:41'),
+(17, 'Dua Azam', 'dua@gmail.com', '0987676', 8, 1, 5, '2022-12-24', '14:30:00', 1, '2022-12-15 11:46:07'),
+(18, 'Dua Azam', 'dua@gmail.com', '98797', 8, 1, 2, '2022-12-15', '23:46:00', 1, '2022-12-15 11:46:47');
 
 -- --------------------------------------------------------
 
@@ -97,7 +99,8 @@ CREATE TABLE `hospital` (
 --
 
 INSERT INTO `hospital` (`id`, `name`, `email`, `password`, `address`, `cont_number`, `city`, `region`, `created_at`) VALUES
-(1, 'al khidmat', 'al khidmat@gmail.com', '1234', '32325766', 0, '', 'south', '2022-12-09 19:44:02');
+(1, 'al khidmat', 'al khidmat@gmail.com', '1234', '32325766', 0, '', 'south', '2022-12-09 19:44:02'),
+(2, 'Shifa Hospital', 'shifah@gmail.com', 'sh1234', 'Faisalabad. 11 Kilometer, Jaranwala Road, Faisalabad. –', 21767678, 'Malir', '', '2022-12-15 12:22:47');
 
 -- --------------------------------------------------------
 
@@ -130,7 +133,8 @@ INSERT INTO `patients` (`id`, `f_name`, `l_name`, `email`, `pass`, `age`, `gende
 (4, 'Shafaq', 'Fatima', 'shafaq@gmail.com', '151515', 20, '0', '2002', 'Model Colony', 12323424, '0000-00-00 00:00:00'),
 (5, 'Ali', 'Khan', 'alI@gmail.com', '1234', 17, '0', '2022', 'Malir', 938782347, '0000-00-00 00:00:00'),
 (6, 'Saad', 'Islam', 'saad@gmail.com', '00000', 21, '0', '2022', 'Model Colony', 938782347, '2022-12-11 19:56:47'),
-(7, 'Zoya', 'Khan', 'zoya@gmail.com', '1234', 25, '0', '1998-02-13', 'nazimad Karachi', 324566677, '2022-12-13 16:39:45');
+(7, 'Zoya', 'Khan', 'zoya@gmail.com', '1234', 25, '0', '1998-02-13', 'nazimad Karachi', 324566677, '2022-12-13 16:39:45'),
+(8, 'Dua', 'Azam', 'dua@gmail.com', '1234', 19, 'Female', '2022-12-15', 'Malir Kalaboard,Karachi', 3123123, '2022-12-15 11:43:59');
 
 -- --------------------------------------------------------
 
@@ -239,7 +243,7 @@ ALTER TABLE `appointments`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `booking_status`
@@ -251,13 +255,13 @@ ALTER TABLE `booking_status`
 -- AUTO_INCREMENT for table `hospital`
 --
 ALTER TABLE `hospital`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `patients`
 --
 ALTER TABLE `patients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `pat_list`
