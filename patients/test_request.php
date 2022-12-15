@@ -86,9 +86,7 @@
                     <br>
                     <a href="b_app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
                     <br>
-                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request a Covid test</span></a>
-                    <br>
-                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request vaccination</span></a>
+                    <a href="test_request.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book for Covid test</span></a>
                     <br>
                     <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Results</span></a>
                     <br>
@@ -99,7 +97,7 @@
              <!-- SIDE PANEL END  -->
 
             <div class="col-lg-8 col-md-8 col-sm-10 ml-5">
-               <h2 class="text-uppercase">Book an Appointment</h2>
+               <h2 class="text-uppercase">Book For Covid Test</h2>
                <br>
                <br>
                <form action="../p_action/p_book.php" method="post">
@@ -151,6 +149,19 @@
          <input class="form-check-input" type="checkbox" id="bodyache" name="bodyache" value="bodyache" checked>
          <label class="form-check-label">Bodyache</label>
         </div>
+        <div class="ml-5">
+         <input class="form-check-input" type="checkbox" id="smell" name="smell" value="smell" checked>
+         <label class="form-check-label">Loss Of Smell</label>
+        </div>
+        <div class="ml-5">
+         <input class="form-check-input" type="checkbox" id="cough" name="cough" value="cough" checked>
+         <label class="form-check-label">Dry Cough</label>
+        </div>
+        <div class="ml-5">
+         <input class="form-check-input" type="checkbox" id="diarrhea" name="diarrhea" value="diarrhea" checked>
+         <label class="form-check-label">Diarrhea</label>
+        </div>
+
 
 
                    <!-- VACCINE DROPDOWN COMING FROM DATABASE PHP -->

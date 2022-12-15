@@ -89,9 +89,7 @@ include "../config/db.php";
                     <br>
                     <a href="b_app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
                     <br>
-                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request a Covid test</span></a>
-                    <br>
-                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request vaccination</span></a>
+                    <a href="test_request.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book for Covid test</span></a>
                     <br>
                     <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Results</span></a>
                     <br>
@@ -187,24 +185,15 @@ include "../config/db.php";
             <div class="mb-3 mt-3">
                <label for="Select Time">Select Time</label>
                <input type="time" class="form-control" id="email"  name="time">
-            </div>
                   </div>
-               </div>
-
-         <div class="mb-3 mt-5 text-center">
-            <button type="submit" class="btn btn-danger" name="book">Book Now</button>
-            </div>
-
-
-
-
-
-   
-
-               </form>
-
-            </div>
-               </div>
+                </div>
+              </div>
+            <div class="mb-3 mt-5 text-center">
+          <button type="submit" class="btn btn-danger" name="book">Book Now</button>
+         </div>
+       </form>
+     </div>
+   </div>
       
       <!-- end coronata -->
       
