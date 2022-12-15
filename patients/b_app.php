@@ -105,7 +105,7 @@ include "../config/db.php";
                <h2 class="text-uppercase">Book an Appointment</h2>
                <br>
                <br>
-               <form action="../action/p_book.php" method="post">
+               <form action="../p_action/p_book.php" method="post">
               
                <div class="mb-3 mt-3">
                <label for="id">PATIENT ID</label>

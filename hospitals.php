@@ -76,8 +76,6 @@
       <!-- end header -->
 
 <div class="container-fluid mt-5 text-center" >
-
-  
         <h1 style="font-size:4em; text-align: center; color: black; margin-top:10px ;">HOSPITALS</h1>
         <br>
         <br>

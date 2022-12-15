@@ -109,16 +109,39 @@ session_start();
                <table class="table table-bordered">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Name</th>
+      <th>Patient ID</th>
+      <th>Patient Name</th>
       <th>Email</th>
-      <th>Address</th>
-      <th>Contact</th>
-      <th>Medical record</th>
+      <th>Phone Number</th>
+      <th>Vaccine</th>
+      <th>Selected Date</th>
+      <th>Selected Time</th>
       
     </tr>
   </thead>
   <tbody>
+   <?php
+   $id=$_SESSION['id'];
+   
+   include '../config/db.php';
+   $query="SELECT patients.id,vaccine.Id,bookings.* FROM `bookings` INNER JOIN patients ON bookings.p_id=patients.id INNER JOIN vaccine ON bookings.v_id=vaccine.Id WHERE hos_id=1";
+
+   $result=mysqli_query($conn,$query );
+   while($row=mysqli_fetch_assoc($result)){
+   ?>
+   <tr>
+   <td><?php echo $row['id'];?></td>
+   <td><?php echo $row['id'];?></td>
+   <td><?php echo $row['id'];?></td>
+   <td><?php echo $row['id'];?></td>
+   <td><?php echo $row['id'];?></td>
+   <td><?php echo $row['id'];?></td>
+   <td><?php echo $row['id'];?></td>
+   <td><?php echo $row['id'];?></td>
+   </tr>
+   <?php 
+      }
+   ?>
   </tbody>
 </table>
 

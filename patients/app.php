@@ -123,16 +123,7 @@ include "../config/db.php";
                
                $result = mysqli_query($conn, $query);
                while($row=mysqli_fetch_assoc($result)){
-                  if($row['status']==0){
-                     echo $status="pending";
-
-               }
-               else if($row['status']==1){
-                  echo $status="Booked";
-               }
-               else if($row['status']==2){
-                  echo $status="rejected";
-               }
+                  
                
                ?>
                <tr>
@@ -143,7 +134,25 @@ include "../config/db.php";
                   <td><?php echo $row['v_id'];?></td>
                   <td><?php echo $row['selected_date'];?></td>
                   <td><?php echo $row['selected_time'];?></td>
-                  <td><?php echo $status;?></td>
+                  <td>
+                     <?php
+                  if($row['status']==0){
+                     echo "<span class='badge badge-warning'>Pending</span>";
+
+               }
+               else if($row['status']==1){
+                  echo "<span class='badge badge-success'>Approved</span>";
+               }
+               else if($row['status']==2){
+                  echo "<span class='badge badge-danger'>Rejected</span>";
+               }
+                  ?> 
+                  <select class='status' id="<?php echo $row['id'];?>">
+                     <option value="0" <?php  if($row['status']==0){ echo 'selected'; }?>>Pending</option>
+                     <option value="1" <?php  if($row['status']==1){ echo 'selected'; }?>>Approved</option>
+                     <option value="2" <?php  if($row['status']==2){ echo 'selected'; }?>>Rejected</option>
+                  </select>
+               </td> 
                   
                </tr>
                <?php
@@ -234,3 +243,13 @@ include "../config/db.php";
       <script src="../js/custom.js"></script>
    </body>
 </html>
+<script>
+
+document.ready(function){
+$('.status').change(function(){
+    var id = $(this).attr('id');
+    var slected_status = $(this).find(":selected").val();
+
+});
+}
+</script>

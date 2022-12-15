@@ -69,28 +69,28 @@
       <div class="coronata">
       <div class="container">
       <h1 class="mt-5 ml-3">Register as a hospital</h1>
-  <form action="../action/h_insert.php" method="post" enctype='multipart/form-data'>
+  <form action="../h_action/h_insert.php" method="post" enctype='multipart/form-data'>
     <div class="form-group">
-      <label for="email">Name:</label>
-      <input type="text" class="form-control" id="email" placeholder="Enter email" name="user_name">
+      <label for="email">Hospital Name</label>
+      <input type="text" class="form-control" id="email" name="user_name">
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="user_email">
+      <input type="email" class="form-control" id="email" name="user_email">
     </div>
     
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="user_pswd">
+      <input type="password" class="form-control" id="pwd" name="user_pswd">
     </div>
     <div class="form-group">
       <label for="email">Address:</label>
-      <input type="text" class="form-control" id="address" placeholder="Enter address" name="address">
+      <input type="text" class="form-control" id="address"  name="address">
     </div>
   
     <div class="form-group">
       <label for="email">Contact Number:</label>
-      <input type="number" class="form-control" id="number" placeholder="Enter contact number" name="cont_number">
+      <input type="number" class="form-control" id="number" name="cont_number">
     </div>
   
     <div class="form-group">
@@ -99,7 +99,8 @@
     <select name="city">
       <option value="0">Select City</option>
       <option value="karachi">karachi</option>
-      <option value="lahore">lahore</option>
+      <option value="lahore"  >lahore</option>
+      <option value="faislabad">Faislabad</option>
       <option>
 </select>
     </div>
