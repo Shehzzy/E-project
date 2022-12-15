@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +9,7 @@ session_start();
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Patient Profile</title>
+      <title>Users</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -41,7 +38,7 @@ session_start();
                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
-               <a href="u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
+               <a href="../u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
             <div class="container">
                <div class="row d_flex">
@@ -55,7 +52,7 @@ session_start();
                         <nav class="site-navbar">
                         <ul>
                               <li><a class="active" href="index.php">Home</a></li>
-                              <li><a href="../hospitals.php">Hospitals</a></li>
+                              <li><a href="about.php">Hospitals</a></li>
                               <li><a href="action.php">Appointments</a></li>
                               <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
                               <li><a href="news.php">news</a></li>
@@ -75,15 +72,17 @@ session_start();
          <div class="container">
             <div class="row">
 
-               <!-- ASIDE PANEL START -->
 
-            <div class="col-lg-2 col-md-2 col-sm-2">
+               <!-- SIDE PANEL START  -->
+
+
+            <div class="col-lg-2 col-md-3 col-sm-3">
                 <aside>
                   <br>
                   <br>
                   <a href="profile.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My Profile</span></a>
                   <br>
-                  <a href="app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My appoinments</span></a>
+                    <a href="app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My appoinments</span></a>
                     <br>
                     <a href="b_app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
                     <br>
@@ -95,77 +94,96 @@ session_start();
                     <br>
                     <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Reports</span></a>
                     <br>
-                    <br>
-                    <a href="p_out.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Logout</span></a>
-                    <br>
                 </aside>
             </div>
+             <!-- SIDE PANEL END  -->
 
-            <!-- ASIDE PANEL END -->
-            <!-- PROFILE WITH PHP START -->
-
-
-            <div class="col-lg-4 col-md-4 col-sm-4 ml-5">
-               <h2 class="text-uppercase">My profile   </h2>
+            <div class="col-lg-8 col-md-8 col-sm-10 ml-5">
+               <h2 class="text-uppercase">Book an Appointment</h2>
                <br>
-               <img src="../images/profile.jpeg" alt="profile image" height="100px" width="60%">
                <br>
-               </div>
-               <div class="col-lg-3 col-md-3 col-sm-3 ml-5">
-               <h4>Personal Information</h4>
-               <br>
-               <h6 class="font-weight-bold">PATIENT ID</h6>
-               <p><?php echo $_SESSION['id']; ?></p>
-               <br>
-              <?php
-              $id = $_SESSION['id'];
-              include '../config/db.php';
-              $query = "SELECT * FROM `patients` WHERE id =$id";
-              $result=mysqli_query($conn,$query);
-              while ($row = mysqli_fetch_assoc($result)){
-              ?>
-              <h6 class="font-weight-bold">PATIENT NAME</h6>
-               <p><?php echo $row['f_name']. " ".$row['l_name'];?></p>
-               <br>
-               <h6 class="font-weight-bold">PATIENT EMAIL</h6>
-               <p><?php echo $row['email']; ?></p>
-               <br>
-               <h6 class="font-weight-bold">PATIENT AGE</h6>
-               <p><?php echo $row['age']; ?></p>
-               <br>
-               <h6 class="font-weight-bold">PATIENT GENDER</h6>
-               <p><?php echo $row['gender']; ?></p>
-               <br>
-               <h6 class="font-weight-bold">PATIENT DATE OF BIRTH</h6>
-               <p><?php echo $row['dob']; ?></p>
-               <h6 class="font-weight-bold">PATIENT ADDRESS</h6>
-               <p><?php echo $row['address']; ?></p>
-               <br>
-               <h6 class="font-weight-bold">PATIENT PHONE NUMBER</h6>
-               <p><?php echo $row['m_number']; ?></p>
-               <br>
-               <a href="update_form.php?user_id=<?php echo $_SESSION['id'];?>"><button class="btn btn-success">Update</button></a>
-               <a href="../p_action/d_user.php?user_id=<?php echo $_SESSION['id'];?>"><button class="btn btn-danger">Delete</button></a>
-
-               <?php
-              }
-               ?>
-               </div>
-            </div>
-           
+               <form action="../p_action/p_book.php" method="post">
+              
+               <div class="mb-3 mt-3">
+               <label for="id">PATIENT ID</label>
             
-                        <!--PROFILE WITH PHP END  -->
-               </div>
+               <input type="number" name="user_id"  class="form-control" value="<?php echo $_SESSION['id'];?>">
             </div>
+
+               <div class="mb-3 mt-3">
+               <label for="email">Name:</label>
+            
+               <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+            </div>
+                        
+                        <div class="mb-3 mt-3">
+               <label for="email">Email:</label>
+               <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="mb-3">
+               <label for="pwd">Phone Number:</label>
+               <input type="number" class="form-control" id="pwd" placeholder="Enter phone number" name="p_num">
+            </div>
+          <div class="form-check,mb-3">
+
+          <label for="pwd">Is The Patient Undergoing Dialysis?</label>
+          </div>
+          <div class="ml-4">
+          <input type="radio" class="form-check-input" id="yes" name="yes" value="yes" checked>YES
+          </div>
+          <div class="ml-4">
+          <input type="radio" class="form-check-input" id="no" name="no" value="no" checked>NO
+          </div>
+          <br>
+          <div class="mb-3">
+          <label for="date">Date When Symtoms First Appeared?</label>
+               <input type="date" class="form-control" name="date">
+            </div>
+
+            <div class="form-check,ml-4">
+            <label for="symtoms">What Are The Symptoms You're Currently Facing?</label>
+            </div>
+            <div class="ml-5">
+         <input class="form-check-input" type="checkbox" id="fever" name="fever" value="fever" checked>
+         <label class="form-check-label">Fever</label>
+        </div>
+        <div class="ml-5">
+         <input class="form-check-input" type="checkbox" id="bodyache" name="bodyache" value="bodyache" checked>
+         <label class="form-check-label">Bodyache</label>
+        </div>
+
+
+                   <!-- VACCINE DROPDOWN COMING FROM DATABASE PHP -->
+                 
+                   <div class="mb-3 mt-3">
+               <label for="date">Select date</label>
+               <input type="date" class="form-control" name="date">
+            </div>
+
+            <div class="mb-3 mt-3">
+               <label for="Select Time">Select Time</label>
+               <input type="time" class="form-control" id="email"  name="time">
+            </div>
+                  </div>
+               </div>
+
+         <div class="mb-3 mt-5 text-center">
+            <button type="submit" class="btn btn-danger" name="book">Book Now</button>
+            </div>
+
+
+
+
+
+   
+
+               </form>
+
+            </div>
+               </div>
+      
       <!-- end coronata -->
-
-
-
-
-
-
-
-
+      
       <!--  footer -->
       <footer>
          <div class="footer">
@@ -232,4 +250,4 @@ session_start();
       <script src="../js/owl.carousel.min.js"></script>
       <script src="../js/custom.js"></script>
    </body>
-</html>
+</htm
