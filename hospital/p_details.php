@@ -139,13 +139,12 @@ include '../config/db.php';
    <td><?php echo $row['selected_date'];?></td>
    <td><?php echo $row['selected_time'];?></td>
    <td>
-                    
-<select class='status' id="<?php echo $row['id'];?>">
-<option value="0" <?php  if($row['status']==0){ echo 'selected'; }?>>Pending</option>
-<option value="1" <?php  if($row['status']==1){ echo 'selected'; }?>>Approved</option>
-<option value="2" <?php  if($row['status']==2){ echo 'selected'; }?>>Rejected</option>
-</select>
-</td> 
+                  <select class='status' id="<?php echo $row['id'];?>">
+                     <option value="0" <?php  if($row['status']==0){ echo 'selected'; }?>>Pending</option>
+                     <option value="1" <?php  if($row['status']==1){ echo 'selected'; }?>>Approved</option>
+                     <option value="2" <?php  if($row['status']==2){ echo 'selected'; }?>>Rejected</option>
+                  </select>
+               </td> 
                   
    </tr>
    <?php 
@@ -153,36 +152,6 @@ include '../config/db.php';
    ?>
   </tbody>
 </table>
-<script>
-
-document.ready(function){
-$('.status').change(function(){
-    var id = $(this).attr('id');
-    var selected_status = $(this).find(":selected").val();
-    if($(this).is(':checked'))
-     {
-         $id = $(this).attr("id");
-         $.post("handle.php",{action:"checked",id:$id},function(data){
-          alert("Peoduct is set to display...");
-         });
-     }
-     else
-     {
-       alert("unchecked");
-        $id = $(this).attr("id");
-         $.post("handle.php",{action:"unchecked",id:$id},function(data){
-          alert("Peoduct is un-set to display...");
-         });
-     }
-
-       });
-
-    });
-
-});
-}
-</script>
-
             </div>
                </div>
             </div>

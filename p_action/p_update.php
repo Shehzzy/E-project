@@ -15,7 +15,7 @@ if(isset($_POST['update']))
     include '../config/db.php';
     //make connection with database. 4 paramater server name,db user_name, db password, db name
 
-$query = "UPDATE `patients` SET `f_name`=$f_name',`l_name`='$l_name',`email`='$email',`pass`='$password',`age`='$age',`gender`='$gender',`dob`='$dob',`address`='$address',`m_number`='$m_num' WHERE `id`=".$user_id;
+$query = "UPDATE `patients` SET `f_name`='$f_name',`l_name`='$l_name',`email`='$email',`pass`='$password',`age`='$age',`gender`='$gender',`dob`='$dob',`address`='$address',`m_number`='$m_num' WHERE `id`=".$user_id;
     
     //execute or run query on database connection
     $result=mysqli_query($conn,$query);

@@ -118,7 +118,7 @@ if(isset($_POST['login'])){
         $_SESSION['id']=$row['id'];
         echo "<script>
         alert('Congratulation you have successfully login!');
-        window.location='alldetails.php';
+        window.location='index.php';
         </script>";
     }
     else{

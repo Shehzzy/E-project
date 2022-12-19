@@ -145,11 +145,6 @@ include "../config/db.php";
                   echo "<span class='badge badge-danger'>Rejected</span>";
                }
                   ?> 
-                  <select class='status' id="<?php echo $row['id'];?>">
-                     <option value="0" <?php  if($row['status']==0){ echo 'selected'; }?>>Pending</option>
-                     <option value="1" <?php  if($row['status']==1){ echo 'selected'; }?>>Approved</option>
-                     <option value="2" <?php  if($row['status']==2){ echo 'selected'; }?>>Rejected</option>
-                  </select>
                </td> 
                   
                </tr>
@@ -241,3 +236,13 @@ include "../config/db.php";
       <script src="../js/custom.js"></script>
    </body>
 </html>
+<script>
+
+document.ready(function){
+$('.status').change(function(){
+    var id = $(this).attr('id');
+    var slected_status = $(this).find(":selected").val();
+
+});
+}
+</script>
