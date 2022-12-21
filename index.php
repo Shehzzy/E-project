@@ -88,8 +88,7 @@
                               <div class="col-md-8">
                                  <div class="photog">
                                     <h1>Care early<br>Coronavirus</h1>
-                                    <a class="read_more" href="" >Read More</a>
-                                    <a class="read_more" href="about.php" >About Us</a>
+                                    
                                  </div>
                               </div>
                            </div>
@@ -104,8 +103,7 @@
                               <div class="col-md-8">
                                 <div class="photog">
                                     <h1>Care early<br>Coronavirus</h1>
-                                    <a class="read_more" href="" >Read More</a>
-                                    <a class="read_more" href="about.php" >About Us</a>
+                                   
                                  </div>
                               </div>
                            </div>
@@ -120,8 +118,7 @@
                               <div class="col-md-8">
                                 <div class="photog">
                                     <h1>Care early<br>Coronavirus</h1>
-                                    <a class="read_more" href="" >Read More</a>
-                                    <a class="read_more" href="about.php" >About Us</a>
+
                                  </div>
                               </div>
                            </div>
@@ -151,7 +148,7 @@
                      <h2>About Corona Virus </h2>
                      <p>Corona Virus which is commonly known as COVID-19 is an infectious disease that causes illness in the respiratory system in humans. The term Covid 19 is sort of an acronym, derived from “Novel Corona Virus Disease 2019”. Corona Virus has affected our day to day life. This pandemic has affected millions of peoples, who are either sick or are being killed due to the spread of this disease.
                      </p>
-                     <a class="read_more" href="about.php">About More</a>
+                    
                   </div>
                </div>
                <div class="col-md-5">
@@ -175,10 +172,11 @@
                </div>
                <div class="col-md-5 oder1">
                   <div class="titlepage text_align_left">
-                     <h2>Coronavirus what it is?</h2>
-                     <p>when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+                     <h2> What is coronavirus?</h2>
+                     <p>The virus can spread from an infected person’s mouth or nose in small liquid particles when they cough, sneeze, speak, sing or breathe. These particles range from larger respiratory droplets to smaller aerosols.
+
                      </p>
-                     <a class="read_more" href="coronata.php">About More</a>
+                  
                   </div>
                </div>
             </div>
@@ -193,7 +191,7 @@
                <div class="col-md-12">
                   <div class="titlepage text_align_center">
                      <h2>How to Protect Yourself</h2>
-                     <p>when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using  
+                     <p>COVID-19, also known as the coronavirus has spread rapidly across the world, leading to a global pandemic and causing significant illness and death. During Christmas 2022 and New Year 2023 parties, it is important to take steps to reduce the risk of covid infection and transmission.
                      </p>
                   </div>
                </div>
@@ -210,9 +208,10 @@
                           <div class="desktop">
                              <i><img src="images/pro1.png" alt="#"/></i>
                            <h3> Wear Mask</h3>
-                           <span> Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</span>
+                           <span> Wash your hands before and after touching the mask.
+Wash reusable masks after each use.</span>
                           </div>
-                           <a class="read_more" href="protect.php">Read More</a>
+                          
                         </div>
                      </div>
                      <div class="item">
@@ -220,19 +219,18 @@
                           <div class="desktop">
                              <i><img src="images/pro2.png" alt="#"/></i>
                            <h3> Wash Your Hands</h3>
-                           <span> Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</span>
+                           <span> Wash hands with soap and water for at least 20 seconds. Use the cleanest water possible, for example from an improved source</span>
                           </div>
-                           <a class="read_more" href="protect.php">Read More</a>
-                        </div>
+                          </div>
                      </div>
                      <div class="item">
                          <div class="protect_box text_align_center">
                           <div class="desktop">
                              <i><img src="images/pro3.png" alt="#"/></i>
                            <h3> Stay at Home</h3>
-                           <span> Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</span>
+                           <span>Stay home and separate from others · Improve ventilation (air flow) at home to help prevent COVID-19 from spreading to other people · </span>
                           </div>
-                           <a class="read_more" href="protect.php">Read More</a>
+                        
                         </div>
                      </div>
                   </div>
@@ -250,7 +248,9 @@
                <div class="col-md-12">
                   <div class="titlepage text_align_center ">
                      <h2>Coronavirus Cases</h2>
-                     <p>making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful</p>
+                     <br>
+                     <br>
+                     <p>Islamabad Capital Territory and Peshawar District have recorded about 79,000 and 47,000 confirmed cases respectively as of the latest available data.Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful</p>
                   </div>
                </div>
             </div>
@@ -258,30 +258,30 @@
                <div class=" col-md-4">
                   <div class="latest text_align_center">
                      <figure><img src="images/cases1.png" alt="#"/></figure>
-                      <a class="read_more" href="cases.php">Read More</a>
+                      
                      <div class="nostrud">
                         <h3>Cases 01</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
+                        <p>In Pakistan, from 3 January 2020 to 4:53pm CET, 12 December 2022, there have been 1,575,382 confirmed cases of COVID-19 with 30,634 deaths, reported to WHO. In Pakistan, from 3 January 2020 to 4:53pm CET, 12 December 2022</p>
                      </div>
                   </div>
                </div>
                <div class=" col-md-4">
                   <div class="latest text_align_center">
                      <figure><img src="images/cases2.png" alt="#"/></figure>
-                      <a class="read_more" href="cases.php">Read More</a>
+                      
                      <div class="nostrud">
                         <h3>Cases 02</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
+                        <p>We estimate that 99% of people in Pakistan have been infected at least once as of. December 12. We estimate that 99% of people in Pakistan have been infected at least once as of. December 12.We estimate that 99% of people in Pakistan have been infected</p>
                      </div>
                   </div>
                </div>
                <div class=" col-md-4">
                   <div class="latest text_align_center">
                      <figure><img src="images/cases3.png" alt="#"/></figure>
-                      <a class="read_more" href="cases.php">Read More</a>
+                     
                      <div class="nostrud">
                         <h3>Cases 03</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
+                        <p>Pakistan recorded 1575486 Coronavirus Cases since the epidemic began, according to the World Health Organization (WHO). In addition, Pakistan reported 30635 Pakistan recorded 1575486 Coronavirus Cases since the epidemic began</p>
                      </div>
                   </div>
                </div>
@@ -303,50 +303,24 @@
                <div class=" col-md-6">
                      <div id="ho_efcet" class="reader text_align_center">
                         <i><img src="images/doctor1.png" alt="#"/></i>
-                        <h3>Dr.Golap den</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
-                        <span><img src="images/do.png" alt="#"/></span>
+                        <h3>Dr.Aliza</h3>
+                        <p>This study aimed to describe the dealings of 20 biomedical doctors with coronavirus disease-19 (COVID-19) in the Sindh province of Pakistan. Focusing on physicians from three different hospitals, we describe their challenges, emotions, and views concerning the pandemic.</p>
+                       
                      </div>
                   </div>
                           <div class=" col-md-6">
                      <div id="ho_efcet" class="reader text_align_center">
                         <i><img src="images/doctor2.png" alt="#"/></i>
-                        <h3>Dr.Golap den</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
-                        <span><img src="images/do.png" alt="#"/></span>
+                        <h3>Dr.Aria</h3>
+                        <p> Furthermore, these care providers faced a great fear of infection and an even greater fear of transmitting the virus to their families and friends. A few also feared stigmatization as viral carriers. Whether they experienced fear or not, all of our physician interlocutors emphasized their sense of responsibility.</p>
+                       
                      </div>
                   </div>
                </div>
          </div>
       </div>
       <!-- end cases -->
-<!-- update -->
-<div class="update">
-   <div class="cevery_white">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <div class="titlepage">
-                  <h2>Get Every Update.... </h2>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="cevery_bg">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <form id="colof" class="form_subscri">
-                  <input class="newsl" placeholder="Your Email" type="text" name="Email">
-                  <button class="subsci_btn">Subscribe Now</button>
-               </form>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<!-- update -->
+<
       <!--  footer -->
       <footer>
          <div class="footer">
