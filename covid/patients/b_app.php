@@ -1,9 +1,6 @@
-<?php 
+<?php
 session_start();
-include '../config/db.php';
-$query = "SELECT * FROM `patients` where `id`=". $_GET['user_id'];
-$result=mysqli_query($conn,$query);
-$row=mysqli_fetch_assoc($result);
+include "../config/db.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,36 +35,37 @@ $row=mysqli_fetch_assoc($result);
    <!-- body -->
    <body class="main-layout inner_page">
       <!-- top -->
-      <!-- header -->
-         <header class="header-area">
-            <div class="left">
+     <!-- header -->
+     <header class="header-area">
+         <div class="left">
                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
-               <a href="../u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
+               <a href="u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
             <div class="container">
                <div class="row d_flex">
-                  <div class="col-sm-3 logo_sm">
+                  <div class="col-sm-5 logo_sm">
                      <div class="logo">
-                        <a href="../index.php"></a>
+                        <a href="index.php"></a>
                      </div>
                   </div>
                   <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
                      <div class="navbar-area">
                         <nav class="site-navbar">
-                        <ul>
-                              <li><a class="active" href="index.php">Home</a></li>
-                              <li><a href="about.php">Hospitals</a></li>
-                              <li><a href="action.php">Appointments</a></li>
-                              <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
-                              <li><a href="news.php">news</a></li>
-                              <li><a href="about.php">About</a></li>
-                              <li><a href="contact.php">Contact </a></li>
-                           </ul>
+                           <ul>
+                           <li><a href="index.php">Home</a></li>
+                              <li><a href="hospitals.php">Hospitals</a></li>
+                              <li><a href="about.php">About Us</a></li>
+                              <li><a href="contact.php">Contact Us </a></li>
+                        
+                        </ul>
+                           <button class="nav-toggler">
+                           <span></span>
+                           </button>
                         </nav>
-                     </div>
-                  </div>
+               </div>
+               </div>
                </div>
             </div>
          </header>
@@ -92,9 +90,7 @@ $row=mysqli_fetch_assoc($result);
                     <br>
                     <a href="b_app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
                     <br>
-                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request a Covid test</span></a>
-                    <br>
-                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request vaccination</span></a>
+                    <a href="test_request.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book for Covid test</span></a>
                     <br>
                     <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Results</span></a>
                     <br>
@@ -105,69 +101,100 @@ $row=mysqli_fetch_assoc($result);
              <!-- SIDE PANEL END  -->
 
             <div class="col-lg-8 col-md-8 col-sm-10 ml-5">
-               <h2 class="text-uppercase">Edit your profile</h2>
+               <h2 class="text-uppercase">Book an Appointment</h2>
                <br>
                <br>
-               <form action="../p_action/p_update.php" method="post">
+               <form action="../p_action/p_book.php" method="post">
               
-               <div class="form-group">
-         <label for="f_name">First Name</label>
-         <input type="hidden" class="form-control"  value="<?php echo $_GET['user_id'];?>" name="user_id">
-
-         <input type="text" class="form-control"  value="<?php echo $row['f_name'];?>"  name="f_name">
-         </div>
-         <div class="form-group">
-         <label for="l_name">Last Name</label>
-         <input type="text" class="form-control" value="<?php echo $row['l_name'];?>" id="l_name" name="l_name">
-         </div>
-         <div class="form-group">
-         <label for="email">Email Address</label>
-         <input type="text" class="form-control"  id="email" name="email" value="<?php echo $row['email'];?>">
-         </div>
-         <div class="form-group">
-         <label for="pass">Password</label>
-         <input type="password" class="form-control"  id="pass" name="pass"value="<?php echo $row['pass'];?>">
-         </div>
-         <div class="form-group">
-         <label for="age">Age</label>
-         <input type="number" class="form-control" value="<?php echo $row['age'];?>" id="age" name="age">
-         </div>
-         <div class="form-group">
-         <label for="gender">Gender</label>
-         <br>
-         <select name="gender" id="gender">
-            <option value="">Select your Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-         </select>
-         </div>
-    <div class="form-group">
-         <label for="dob">Enter your Date of Birth</label>
-         <input type="date" class="form-control" value="<?php echo $row['dob'];?>" id="dob" name="dob">
-         </div>
-         <div class="form-group">
-         <label for="address">Full Address</label>
-         <input type="text" class="form-control" value="<?php echo $row['address'];?>" id="add" name="add">
-         </div>
-         <div class="form-group">
-         <label for="number">Mobile Number </label>
-         <input type="text" class="form-control" value="<?php echo $row['m_number'];?>" id="num" name="num">
-         </div>
-         <div class="text-center text-white">
-  <button type="submit" class="btn btn-danger mt-5 mb-5" name="update">Update</button>
-  </div>
-  
-
-
-
-
-
-   
-
-               </form>
-
+               <div class="mb-3 mt-3">
+               <label for="id">PATIENT ID</label>
+            
+               <input type="number" name="user_id"  class="form-control" value="<?php echo $_SESSION['id'];?>">
             </div>
-               </div>
+
+               <div class="mb-3 mt-3">
+               <label for="email">Name:</label>
+            
+               <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+            </div>
+                        
+                        <div class="mb-3 mt-3">
+               <label for="email">Email:</label>
+               <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="mb-3">
+               <label for="pwd">Phone Number:</label>
+               <input type="number" class="form-control" id="pwd" placeholder="Enter phone number" name="p_num">
+            </div>
+
+            <!-- HOSPITAL DROPDOWN COMING FROM DATABASE PHP -->
+
+            <?php
+            include '../config/db.php';
+            $query = "SELECT `id`,`name` FROM `hospital`";
+            $result = mysqli_query($conn, $query);
+            if($result->num_rows>0){
+               $row=mysqli_fetch_all($result,MYSQLI_ASSOC);
+            }
+               ?>
+                  <div class="mb-3">
+                  <label for="pwd">Hospital Names</label>
+                  <br>
+                  <select class="form-select" aria-label="Default select example" name="hospital">
+                  <option value="selected">Select Hospital</option>
+                  <?php 
+                  foreach ($row as $rows) {
+                  ?>
+                     <option><?php echo$rows['id']."- ".$rows['name']; ?> </option>
+                     <?php 
+                     }
+                     ?>
+                  </select>
+                  </div>
+
+                   <!-- VACCINE DROPDOWN COMING FROM DATABASE PHP -->
+
+            <?php
+            include '../config/db.php';
+            $query = "SELECT `id`,`V_name` FROM `vaccine`";
+            $result = mysqli_query($conn, $query);
+            if($result->num_rows>0){
+               $row=mysqli_fetch_all($result,MYSQLI_ASSOC);
+            }
+               ?>
+                  <div class="mb-3">
+                  <label for="pwd">Vaccine Name</label>
+                  <br>
+                  <select class="form-select" aria-label="Default select example" name="vaccine">
+                  <option value="selected">Select Vaccine</option>
+                  <?php 
+                  foreach ($row as $rows) {
+                  ?>
+                     <option><?php echo $rows['id']."- ".$rows['V_name']; ?> </option>
+                     <?php 
+                     }
+                     ?>
+                  </select>
+                  </div>
+
+
+                  <div class="mb-3 mt-3">
+               <label for="date">Select date</label>
+               <input type="date" class="form-control" name="date">
+            </div>
+
+            <div class="mb-3 mt-3">
+               <label for="Select Time">Select Time</label>
+               <input type="time" class="form-control" id="email"  name="time">
+                  </div>
+                </div>
+              </div>
+            <div class="mb-3 mt-5 text-center">
+          <button type="submit" class="btn btn-danger" name="book">Book Now</button>
+         </div>
+       </form>
+     </div>
+   </div>
       
       <!-- end coronata -->
       

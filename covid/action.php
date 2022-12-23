@@ -31,11 +31,15 @@
    </head>
    <!-- body -->
    <body class="main-layout inner_page">
-    
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+      </div>
+      <!-- end loader -->
       <!-- top -->
-                    <!-- header -->
+                  <!-- header -->
          <header class="header-area">
-            <div class="left">
+         <div class="left">
                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
@@ -43,22 +47,20 @@
             </div>
             <div class="container">
                <div class="row d_flex">
-                  <div class="col-sm-3 logo_sm">
+                  <div class="col-sm-5 logo_sm">
                      <div class="logo">
-                     <a href="index.php"></a>
+                        <a href="index.php"></a>
                      </div>
                   </div>
-               <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
+                  <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
                      <div class="navbar-area">
                         <nav class="site-navbar">
-                        <ul>
-                              <li><a class="active" href="index.php">Home</a></li>
+                           <ul>
+                           <li><a href="index.php">Home</a></li>
                               <li><a href="hospitals.php">Hospitals</a></li>
-                              <li><a href="action.php">Take action</a></li>
-                              <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
-                              <li><a href="news.php">news</a></li>
                               <li><a href="about.php">About Us</a></li>
                               <li><a href="contact.php">Contact Us </a></li>
+                        
                         </ul>
                            <button class="nav-toggler">
                            <span></span>
@@ -70,105 +72,52 @@
             </div>
          </header>
       <!-- end header -->
-
-<div class="container-fluid mt-5 text-center" >
-        <h1 style="font-size:4em; text-align: center; color: black; margin-top:10px ;">HOSPITALS</h1>
-        <br>
-        <br>
-        <br>
-         <div class="card-deck">
-            <div class="card">
-              <img src="images/al khidmat.webp" class="" height="300px" width="492px" alt="..." style="margin-left: 0px;">
-              <div class="card-body">
-                <h1 class="card-title" style="font-size: 3em; text-align: center;">Al Khidmat Hospital</h1>
-             
-                <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px; height: 55px; width: 150px;"><a href="Al Khidmat.php">DETAILS </a></button>
-              </div>
+    
+    <!-- cases -->
+      <div class="cases">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center ">
+                     <h2>Take Action</h2>
+                     <p>making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful</p>
+                  </div>
+               </div>
             </div>
-            <div class="card">
-              <img src="images/ao-hospital.jpg" class="" height="300px" width="570px" alt="..." style="margin-left: 0px;">
-              <div class="card-body">
-                <h1 class="card-title" style="font-size: 3em; text-align: center;">A.0 Hospital</h1>
-                
-                <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;"> <a href="A.O Hospital.php"> DETAILS </a></button>
-              
-              </div>
+            <div class="row d_flex">
+               <div class=" col-md-4">
+                  <div class="latest text_align_center">
+                     <figure><img src="images/cases1.png" alt="#"/></figure>
+                     <div class="nostrud">
+                        <h3>Cases 01</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
+                     </div>
+                  </div>
+               </div>
+               <div class=" col-md-4">
+                  <div class="latest text_align_center">
+                     <figure><img src="images/cases2.png" alt="#"/></figure>
+                     <div class="nostrud">
+                        <h3>Cases 02</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
+                     </div>
+                  </div>
+               </div>
+               <div class=" col-md-4">
+                  <div class="latest text_align_center">
+                     <figure><img src="images/cases3.png" alt="#"/></figure>
+                     <div class="nostrud">
+                        <h3>Cases 03</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="card">
-              <img src="images/pak international hospital.jpg" class="" height="550px" width="570px" alt="..." style="margin-left: 0px;">
-              <div class="card-body">
-                <h1 class="card-title" style="font-size: 2.5em; text-align: center;">Pak International Hospital</h1>
-                <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;">DETAILS </button>
-              
-              </div>
-            </div>
-          </div>
-          <br>
-            <br>
-          <div class="card-deck">
-            <div class="card">
-              <img src="images/patel hospital.jpg" class="" height="270px" width="570px" alt="..." style="margin-left: 0px;">
-              <div class="card-body">
-                <h1 class="card-title" style="font-size: 3em; text-align: center;">Patel Hospital</h1>
-                
-                <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top:15px; height: 55px; width: 150px;">DETAILS </button>
-              
-              </div>
-            </div>
-            <div class="card">
-              <img src="images/shifa.jpg" class="" height="300px" width="570px" alt="..." style="margin-left: 0px;">
-              <div class="card-body">
-                <h1 class="card-title" style="font-size: 3em; text-align: center;">Shifa Hospital</h1>
-                
-                <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;">DETAILS </button>
-              
-              </div>
-            </div>
-            <div class="card">
-              <img src="images/children hospital.jpg" class="" height="300px" width="570px" alt="..." style="margin-left: 0px;">
-              <div class="card-body">
-                <h1 class="card-title" style="font-size: 2.8em; text-align: center;">Children Hospital</h1>
-               
-                <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;">DETAILS </button>
-              
-              </div>
-            </div> 
-            </div>
-            <br>
-            <br>
-            <div class="card-deck">
-              <div class="card">
-                <img src="images/agha khan.jpg" class="" height="300px" width="570px" alt="..." style="margin-left: 0px;">
-                <div class="card-body">
-                  <h1 class="card-title" style="font-size: 2.5em; text-align: center;">Agha Khan Hospital</h1>
-                  
-                  <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;">DETAILS </button>
-              
-                </div>
-              </div>
-              <div class="card">
-                <img src="images/dow hospital.jpg" class="" height="300px" width="570px" alt="..." style="margin-left: 0px;">
-                <div class="card-body">
-                  <h1 class="card-title" style="font-size: 3em; text-align: center;">Dow Hospital</h1>
-                  
-                  <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;">DETAILS </button>
-              
-                </div>
-              </div>
-              <div class="card">
-                <img src="images/liaquat national.jpg" class="" height="300px" width="600px" alt="..." style="margin-left: 0px;">
-                <div class="card-body">
-                  <h1 class="card-title" style="font-size: 2.5em; text-align: center;">Liaquat National Hospital</h1>
-                 
-                  <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;">DETAILS </button>
-                </div>
-          </div>
-        
-          </div>
-          </div>
-          
-         <!--  footer -->
- <footer>
+         </div>
+      </div>
+      <!-- end cases -->
+      <!--  footer -->
+      <footer>
          <div class="footer">
             <div class="container">
                <div class="row">
@@ -207,7 +156,7 @@
                            Call : +01 1234567890
                         </li>
                         <li><i class="fa fa-envelope" aria-hidden="true"></i>
-                           <a href="Javascript:void(0)">Email : demo@gmail.com</a>
+                           <a href="">Email : demo@gmail.com</a>
                         </li>
                      </ul>
                             
@@ -243,7 +192,5 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
       <script src="js/owl.carousel.min.js"></script>
       <script src="js/custom.js"></script>
-  
-    </body>
-
+   </body>
 </html>

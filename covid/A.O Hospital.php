@@ -37,9 +37,9 @@
       </div>
       <!-- end loader -->
       <!-- top -->
-       <!-- header -->
+                <!-- header -->
          <header class="header-area">
-            <div class="left">
+         <div class="left">
                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
@@ -47,7 +47,7 @@
             </div>
             <div class="container">
                <div class="row d_flex">
-                  <div class="col-sm-3 logo_sm">
+                  <div class="col-sm-5 logo_sm">
                      <div class="logo">
                         <a href="index.php"></a>
                      </div>
@@ -56,48 +56,59 @@
                      <div class="navbar-area">
                         <nav class="site-navbar">
                            <ul>
-                           <li><a class="active" href="index.php">Home</a></li>
+                           <li><a href="index.php">Home</a></li>
                               <li><a href="hospitals.php">Hospitals</a></li>
-                              <li><a href="action.php">Take action</a></li>
-                              <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
-                              <li><a href="news.php">news</a></li>
                               <li><a href="about.php">About Us</a></li>
                               <li><a href="contact.php">Contact Us </a></li>
-                           </ul>
+                        
+                        </ul>
                            <button class="nav-toggler">
                            <span></span>
                            </button>
                         </nav>
-                     </div>
-                  </div>
+               </div>
+               </div>
                </div>
             </div>
          </header>
       <!-- end header -->
-      <!-- about -->
-      <div class="about">
-         <div class="container_width">
-            <div class="row d_flex">
-                   <div class="col-md-7">
-                  <div class="titlepage text_align_left">
-                     <h2>About Corona Virus </h2>
-                     <p>Corona Virus which is commonly known as COVID-19 is an infectious disease that causes illness in the respiratory system in humans. The term Covid 19 is sort of an acronym, derived from “Novel Corona Virus Disease 2019”. Corona Virus has affected our day to day life. This pandemic has affected millions of peoples, who are either sick or are being killed due to the spread of this disease.
-                     </p>
-                     <a class="read_more" href="about.php">About More</a>
-                  </div>
-               </div>
-               <div class="col-md-5">
-                  <div class="about_img text_align_center">
-                     <figure><img src="images/about.png" alt="#"/></figure>
-                  </div>
-               </div>
-              
-            </div>
-         </div>
-      </div>
-      <!-- end about -->
-      <!--  footer -->
-      <footer>
+<body>
+</div>
+            <div class="container">
+               <div class="row">
+    <div class="col-lg-8 col-md-2" style=" height: 870px;">
+<img src="images/al khidmat.webp" width="50%;">
+        <br>
+    <div class="col-lg-10 col-md-10"  style=" border:2px solid #F5B7B1; box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); width: 1000px; margin-left: 400px; margin-top:100px; border-radius: 20px;">
+     <br>
+        <h1><u><center>A.O Hospital</center></u></h1>
+    
+<br>
+<br>
+<div style="margin-left:30px;">
+     <h2>Contact Number: 0315-9824600</h2>
+     <br>
+     <h2>Location: Gulistan E Johar </h2>
+     <br>
+     <h2>Consultants: Dr ALi , Dr Parveen, Dr Faiq</h2>
+     <br>
+     <h2>Covid Vaccine: Sinovac , Fizer </h2>
+     <br>
+     <h2>Timing: 8 am To 2 am</h2>
+     <br>
+     <h2> 24 Hours Emergency Ward</h2>
+     <br>
+     <br>   
+    <center><button class="btn" style="border: 2px solid; background-color:gray; height: 55px;"> PATIENT DETAILS </button> </center>
+     <br>
+     <br>
+</div>
+    </div>
+     </div>
+     </div>
+        </div>
+ <!--  footer -->
+ <footer>
          <div class="footer">
             <div class="container">
                <div class="row">
@@ -107,11 +118,13 @@
                               <ul class="menu_footer">
                                  <li><a href="index.php">Home</a><li>
                                  <li><a href="">What we do</a><li>
-                                 <li><a href="">Media</a><li>
-                                 <li><a href="">Travel Advice</a><li>
+                                 <li> <a href="">Media</a><li>
+                                 <li> <a href="">Travel Advice</a><li>
                                  <li><a href="">Protection</a><li>
                                  <li><a href="">Care</a><li>
                               </ul>
+                             
+           
                            </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
@@ -120,6 +133,9 @@
                               <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various</p>
                            </div>
                         </div>
+                     
+                
+                       
                         <div class="col-lg-3 col-md-6 col-sm-6">
                            <div class="hedingh3  text_align_left">
                               <h3>Contact  Us</h3>
@@ -131,9 +147,11 @@
                            Call : +01 1234567890
                         </li>
                         <li><i class="fa fa-envelope" aria-hidden="true"></i>
-                           <a href="">Email : demo@gmail.com</a>
+                           <a href="Javascript:void(0)">Email : demo@gmail.com</a>
                         </li>
-                     </ul>     
+                     </ul>
+                            
+                           
                      </div>
                   </div>
                      <div class="col-lg-4 col-md-6 col-sm-6">
@@ -144,6 +162,7 @@
                               </div>
                            </div>
                         </div>
+                    
                </div>
             </div>
             <div class="copyright">
@@ -165,4 +184,7 @@
       <script src="js/owl.carousel.min.js"></script>
       <script src="js/custom.js"></script>
    </body>
+</html>
+    </body>
+</head>
 </html>

@@ -14,7 +14,6 @@ if(isset($_POST['book'])){
 
     $query = "INSERT INTO `bookings` (`P_name`, `email`, `number`, `p_id`, `hos_id`, `v_id`, `selected_date`, `selected_time`) VALUES('$name','$email','$phone','$user_id','$hospital','
     $vaccine','$date','$time')";
-
     $result = mysqli_query($conn, $query);
     
 
@@ -32,31 +31,6 @@ if(isset($_POST['book'])){
         </script>";
     }
     
-
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>

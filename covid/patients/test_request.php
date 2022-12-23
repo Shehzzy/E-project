@@ -33,35 +33,36 @@
    <body class="main-layout inner_page">
       <!-- top -->
       <!-- header -->
-         <header class="header-area">
-            <div class="left">
+      <header class="header-area">
+         <div class="left">
                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
-               <a href="../u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
+               <a href="u_page.php"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
             <div class="container">
                <div class="row d_flex">
-                  <div class="col-sm-3 logo_sm">
+                  <div class="col-sm-5 logo_sm">
                      <div class="logo">
-                        <a href="../index.php"></a>
+                        <a href="index.php"></a>
                      </div>
                   </div>
                   <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
                      <div class="navbar-area">
                         <nav class="site-navbar">
-                        <ul>
-                              <li><a class="active" href="index.php">Home</a></li>
-                              <li><a href="about.php">Hospitals</a></li>
-                              <li><a href="action.php">Appointments</a></li>
-                              <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
-                              <li><a href="news.php">news</a></li>
-                              <li><a href="about.php">About</a></li>
-                              <li><a href="contact.php">Contact </a></li>
-                           </ul>
+                           <ul>
+                           <li><a href="index.php">Home</a></li>
+                              <li><a href="hospitals.php">Hospitals</a></li>
+                              <li><a href="about.php">About Us</a></li>
+                              <li><a href="contact.php">Contact Us </a></li>
+                        
+                        </ul>
+                           <button class="nav-toggler">
+                           <span></span>
+                           </button>
                         </nav>
-                     </div>
-                  </div>
+               </div>
+               </div>
                </div>
             </div>
          </header>
@@ -122,15 +123,42 @@
                <label for="pwd">Phone Number:</label>
                <input type="number" class="form-control" id="pwd" placeholder="Enter phone number" name="p_num">
             </div>
+
+            <!-- HOSPITAL DROPDOWN COMING FROM DATABASE PHP -->
+
+            <?php
+            include '../config/db.php';
+            $query = "SELECT `id`,`name` FROM `hospital`";
+            $result = mysqli_query($conn, $query);
+            if($result->num_rows>0){
+               $row=mysqli_fetch_all($result,MYSQLI_ASSOC);
+            }
+               ?>
+                  <div class="mb-3">
+                  <label for="pwd">Hospital Names</label>
+                  <br>
+                  <select class="form-select" aria-label="Default select example" name="hospital">
+                  <option value="selected">Select Hospital</option>
+                  <?php 
+                  foreach ($row as $rows) {
+                  ?>
+                     <option><?php echo$rows['id']."- ".$rows['name']; ?> </option>
+                     <?php 
+                     }
+                     ?>
+                  </select>
+                  </div>
+
+                  
           <div class="form-check,mb-3">
 
           <label for="pwd">Is The Patient Undergoing Dialysis?</label>
           </div>
           <div class="ml-4">
-          <input type="radio" class="form-check-input" id="yes" name="yes" value="yes" checked>YES
+          <input type="radio" class="form-check-input" id="yes" name="yes" value="yes">YES
           </div>
           <div class="ml-4">
-          <input type="radio" class="form-check-input" id="no" name="no" value="no" checked>NO
+          <input type="radio" class="form-check-input" id="no" name="no" value="no">NO
           </div>
           <br>
           <div class="mb-3">
@@ -142,29 +170,25 @@
             <label for="symtoms">What Are The Symptoms You're Currently Facing?</label>
             </div>
             <div class="ml-5">
-         <input class="form-check-input" type="checkbox" id="fever" name="fever" value="fever" checked>
+         <input class="form-check-input" type="checkbox" id="fever" name="fever" value="fever">
          <label class="form-check-label">Fever</label>
         </div>
         <div class="ml-5">
-         <input class="form-check-input" type="checkbox" id="bodyache" name="bodyache" value="bodyache" checked>
+         <input class="form-check-input" type="checkbox" id="bodyache" name="bodyache" value="bodyache">
          <label class="form-check-label">Bodyache</label>
         </div>
         <div class="ml-5">
-         <input class="form-check-input" type="checkbox" id="smell" name="smell" value="smell" checked>
+         <input class="form-check-input" type="checkbox" id="smell" name="smell" value="smell">
          <label class="form-check-label">Loss Of Smell</label>
         </div>
         <div class="ml-5">
-         <input class="form-check-input" type="checkbox" id="cough" name="cough" value="cough" checked>
+         <input class="form-check-input" type="checkbox" id="cough" name="cough" value="cough">
          <label class="form-check-label">Dry Cough</label>
         </div>
         <div class="ml-5">
-         <input class="form-check-input" type="checkbox" id="diarrhea" name="diarrhea" value="diarrhea" checked>
+         <input class="form-check-input" type="checkbox" id="diarrhea" name="diarrhea" value="diarrhea">
          <label class="form-check-label">Diarrhea</label>
         </div>
-
-
-
-                   <!-- VACCINE DROPDOWN COMING FROM DATABASE PHP -->
                  
                    <div class="mb-3 mt-3">
                <label for="date">Select date</label>

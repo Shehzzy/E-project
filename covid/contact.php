@@ -37,9 +37,9 @@
       </div>
       <!-- end loader -->
       <!-- top -->
-                    <!-- header -->
+      <!-- header -->
          <header class="header-area">
-            <div class="left">
+         <div class="left">
                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
@@ -47,7 +47,7 @@
             </div>
             <div class="container">
                <div class="row d_flex">
-                  <div class="col-sm-3 logo_sm">
+                  <div class="col-sm-5 logo_sm">
                      <div class="logo">
                         <a href="index.php"></a>
                      </div>
@@ -55,69 +55,64 @@
                   <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
                      <div class="navbar-area">
                         <nav class="site-navbar">
-                        <ul>
-                              <li><a href="index.php">Home</a></li>
-                              <li><a href="about.php">About</a></li>
-                              <li><a href="action.php">take action</a></li>
-                              <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
-                              <li><a class="active" href="news.php">news</a></li>
-                              <li><a href="doctores.php">doctores</a></li>
-                              <li><a href="contact.php">Contact </a></li>
-                           </ul>
+                           <ul>
+                           <li><a href="index.php">Home</a></li>
+                              <li><a href="hospitals.php">Hospitals</a></li>
+                              <li><a href="about.php">About Us</a></li>
+                              <li><a href="contact.php">Contact Us </a></li>
+                        
+                        </ul>
                            <button class="nav-toggler">
                            <span></span>
                            </button>
                         </nav>
-                     </div>
-                  </div>
+               </div>
+               </div>
                </div>
             </div>
          </header>
       <!-- end header -->
-    
-    <!-- cases -->
-      <div class="cases">
-         <div class="container-fluid">
+      <!-- contact -->
+     <div class="contact">
+         <div class="container">
             <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage text_align_center ">
-                     <h2>Take Action</h2>
-                     <p>making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful</p>
+                <div class="col-md-12">
+                     <div class="titlepage text_align_left">
+                        <h2>Contact Us</h2>
+                     </div>
                   </div>
-               </div>
             </div>
-            <div class="row d_flex">
-               <div class=" col-md-4">
-                  <div class="latest text_align_center">
-                     <figure><img src="images/cases1.png" alt="#"/></figure>
-                     <div class="nostrud">
-                        <h3>Cases 01</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
+            <div class="row">
+               <div class="col-md-6">
+                  <form id="request" class="main_form">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="contactus" placeholder="Full Name" type="type" name=" Name"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Email" type="type" name="Email Address">                          
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Phone" type="type" name="Phone Number"> 
+                        </div>
+                        <div class="col-md-12">
+                           <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn">Send Now</button>
+                        </div>
                      </div>
-                  </div>
+                  </form>
                </div>
-               <div class=" col-md-4">
-                  <div class="latest text_align_center">
-                     <figure><img src="images/cases2.png" alt="#"/></figure>
-                     <div class="nostrud">
-                        <h3>Cases 02</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
-                     </div>
-                  </div>
-               </div>
-               <div class=" col-md-4">
-                  <div class="latest text_align_center">
-                     <figure><img src="images/cases3.png" alt="#"/></figure>
-                     <div class="nostrud">
-                        <h3>Cases 03</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
-                     </div>
+                <div class="col-md-6">
+                  <div class="map-responsive">
+                     <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="540" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
                   </div>
                </div>
             </div>
          </div>
       </div>
-      <!-- end cases -->
+      <!-- end contact -->
       <!--  footer -->
       <footer>
          <div class="footer">
@@ -158,7 +153,7 @@
                            Call : +01 1234567890
                         </li>
                         <li><i class="fa fa-envelope" aria-hidden="true"></i>
-                           <a href="">Email : demo@gmail.com</a>
+                           <a href="Javascript:void(0)">Email : demo@gmail.com</a>
                         </li>
                      </ul>
                             

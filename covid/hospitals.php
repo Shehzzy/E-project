@@ -31,15 +31,11 @@
    </head>
    <!-- body -->
    <body class="main-layout inner_page">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
-      </div>
-      <!-- end loader -->
+    
       <!-- top -->
-                    <!-- header -->
+           <!-- header -->
          <header class="header-area">
-            <div class="left">
+         <div class="left">
                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
@@ -47,7 +43,7 @@
             </div>
             <div class="container">
                <div class="row d_flex">
-                  <div class="col-sm-3 logo_sm">
+                  <div class="col-sm-5 logo_sm">
                      <div class="logo">
                         <a href="index.php"></a>
                      </div>
@@ -55,61 +51,121 @@
                   <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
                      <div class="navbar-area">
                         <nav class="site-navbar">
-                        <ul>
-                              <li><a href="index.php">Home</a></li>
-                              <li><a href="about.php">About</a></li>
-                              <li><a href="action.php">take action</a></li>
-                              <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
-                              <li><a class="active" href="news.php">news</a></li>
-                              <li><a href="doctores.php">doctores</a></li>
-                              <li><a href="contact.php">Contact </a></li>
-                           </ul>
+                           <ul>
+                           <li><a href="index.php">Home</a></li>
+                              <li><a href="hospitals.php">Hospitals</a></li>
+                              <li><a href="about.php">About Us</a></li>
+                              <li><a href="contact.php">Contact Us </a></li>
+                        
+                        </ul>
                            <button class="nav-toggler">
                            <span></span>
                            </button>
                         </nav>
-                     </div>
-                  </div>
+               </div>
+               </div>
                </div>
             </div>
          </header>
       <!-- end header -->
-<body>
-</div>
-            <div class="container">
-               <div class="row">
-    <div class="col-lg-8 col-md-2" style=" height: 870px;">
-<img src="images/al khidmat.webp" width="50%;">
+
+<div class="container-fluid mt-5 text-center" >
+        <h1 style="font-size:4em; text-align: center; color: black; margin-top:10px ;">HOSPITALS</h1>
         <br>
-    <div class="col-lg-10 col-md-10"  style=" border:2px solid #F5B7B1; box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); width: 1000px; margin-left: 400px; margin-top:100px; border-radius: 20px;">
-     <br>
-        <h1><u><center>A.O Hospital</center></u></h1>
-    
-<br>
-<br>
-<div style="margin-left:30px;">
-     <h2>Contact Number: 0315-9824600</h2>
-     <br>
-     <h2>Location: Gulistan E Johar </h2>
-     <br>
-     <h2>Consultants: Dr ALi , Dr Parveen, Dr Faiq</h2>
-     <br>
-     <h2>Covid Vaccine: Sinovac , Fizer </h2>
-     <br>
-     <h2>Timing: 8 am To 2 am</h2>
-     <br>
-     <h2> 24 Hours Emergency Ward</h2>
-     <br>
-     <br>   
-    <center><button class="btn" style="border: 2px solid; background-color:gray; height: 55px;"> PATIENT DETAILS </button> </center>
-     <br>
-     <br>
-</div>
-    </div>
-     </div>
-     </div>
-        </div>
- <!--  footer -->
+        <br>
+        <br>
+         <div class="card-deck">
+            <div class="card">
+              <img src="images/al khidmat.webp" class="" height="300px" width="492px" alt="..." style="margin-left: 0px;">
+              <div class="card-body">
+                <h1 class="card-title" style="font-size: 3em; text-align: center;">Al Khidmat Hospital</h1>
+             
+                <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px; height: 55px; width: 150px;"><a href="Al Khidmat.php">DETAILS </a></button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/ao-hospital.jpg" class="" height="300px" width="570px" alt="..." style="margin-left: 0px;">
+              <div class="card-body">
+                <h1 class="card-title" style="font-size: 3em; text-align: center;">A.0 Hospital</h1>
+                
+                <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;"> <a href="A.O Hospital.php"> DETAILS </a></button>
+              
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/pak international hospital.jpg" class="" height="550px" width="570px" alt="..." style="margin-left: 0px;">
+              <div class="card-body">
+                <h1 class="card-title" style="font-size: 2.5em; text-align: center;">Pak International Hospital</h1>
+                <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;">DETAILS </button>
+              
+              </div>
+            </div>
+          </div>
+          <br>
+            <br>
+          <div class="card-deck">
+            <div class="card">
+              <img src="images/patel hospital.jpg" class="" height="270px" width="570px" alt="..." style="margin-left: 0px;">
+              <div class="card-body">
+                <h1 class="card-title" style="font-size: 3em; text-align: center;">Patel Hospital</h1>
+                
+                <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top:15px; height: 55px; width: 150px;">DETAILS </button>
+              
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/shifa.jpg" class="" height="300px" width="570px" alt="..." style="margin-left: 0px;">
+              <div class="card-body">
+                <h1 class="card-title" style="font-size: 3em; text-align: center;">Shifa Hospital</h1>
+                
+                <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;">DETAILS </button>
+              
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/children hospital.jpg" class="" height="300px" width="570px" alt="..." style="margin-left: 0px;">
+              <div class="card-body">
+                <h1 class="card-title" style="font-size: 2.8em; text-align: center;">Children Hospital</h1>
+               
+                <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;">DETAILS </button>
+              
+              </div>
+            </div> 
+            </div>
+            <br>
+            <br>
+            <div class="card-deck">
+              <div class="card">
+                <img src="images/agha khan.jpg" class="" height="300px" width="570px" alt="..." style="margin-left: 0px;">
+                <div class="card-body">
+                  <h1 class="card-title" style="font-size: 2.5em; text-align: center;">Agha Khan Hospital</h1>
+                  
+                  <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;">DETAILS </button>
+              
+                </div>
+              </div>
+              <div class="card">
+                <img src="images/dow hospital.jpg" class="" height="300px" width="570px" alt="..." style="margin-left: 0px;">
+                <div class="card-body">
+                  <h1 class="card-title" style="font-size: 3em; text-align: center;">Dow Hospital</h1>
+                  
+                  <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;">DETAILS </button>
+              
+                </div>
+              </div>
+              <div class="card">
+                <img src="images/liaquat national.jpg" class="" height="300px" width="600px" alt="..." style="margin-left: 0px;">
+                <div class="card-body">
+                  <h1 class="card-title" style="font-size: 2.5em; text-align: center;">Liaquat National Hospital</h1>
+                 
+                  <button class="btn" style="border: 2px solid; background-color:skyblue; color:white;  margin-top: 15px;  height: 55px; width: 150px;">DETAILS </button>
+                </div>
+          </div>
+        
+          </div>
+          </div>
+          
+         <!--  footer -->
  <footer>
          <div class="footer">
             <div class="container">
@@ -185,8 +241,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
       <script src="js/owl.carousel.min.js"></script>
       <script src="js/custom.js"></script>
-   </body>
-</html>
+  
     </body>
-</head>
+
 </html>

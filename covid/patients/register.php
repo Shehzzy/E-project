@@ -1,3 +1,7 @@
+
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -8,30 +12,30 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Users</title>
+      <title>Registration form for patients</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="../css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="css/u.css">
+      <link rel="stylesheet" href="../css/reg.css">
       <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="../css/responsive.css">
       <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif"/>
+      <link rel="icon" href="../images/fevicon.png" type="image/gif"/>
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-       <link rel="stylesheet" href="css/owl.carousel.min.css"> 
+       <link rel="stylesheet" href="../css/owl.carousel.min.css"> 
       <link rel="stylesheet" href="ttps://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
    </head>
    <!-- body -->
    <body class="main-layout inner_page">
       <!-- top -->
-      <!-- header -->
-         <header class="header-area">
-            <div class="left">
+<!-- header -->
+<header class="header-area">
+         <div class="left">
                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
@@ -39,50 +43,92 @@
             </div>
             <div class="container">
                <div class="row d_flex">
-                  <div class="col-sm-3 logo_sm">
+                  <div class="col-sm-5 logo_sm">
                      <div class="logo">
-                        <a href="../index.php"></a>
+                        <a href="index.php"></a>
                      </div>
                   </div>
                   <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
                      <div class="navbar-area">
                         <nav class="site-navbar">
                            <ul>
-                           <li><a class="active" href="index.php">Home</a></li>
+                           <li><a href="index.php">Home</a></li>
                               <li><a href="hospitals.php">Hospitals</a></li>
-                              <li><a href="action.php">Take action</a></li>
-                              <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
-                              <li><a href="news.php">news</a></li>
                               <li><a href="about.php">About Us</a></li>
                               <li><a href="contact.php">Contact Us </a></li>
-                           </ul>
+                        
+                        </ul>
+                           <button class="nav-toggler">
+                           <span></span>
+                           </button>
                         </nav>
-                     </div>
-                  </div>
+               </div>
+               </div>
                </div>
             </div>
          </header>
       <!-- end header -->
       <!-- end banner -->
+     
      <!-- coronata -->
       <div class="coronata">
          <div class="container">
             <div class="row">
-           <div class="col-lg-6 col-md-6 col-sm-6 mb-5">
-            <div class="formm">
-               <h4 class="mt-5 mb-3 text-center">Sign up as...</h4>
-               <div class="text-center">
-                  <a href="patients/register.php" class="btn btn-danger btnnn mt-4 text-center mr-4"><button></button>Patient</a>
-               </div>
-               <div class="text-center">
-                  <a href="hospital/h_register.php" class="btn btn-danger btnnn mt-4 text-center mr-4"><button></button>Hospital</a>
-               </div>
-               <div class="text-center">
-                  <a href="admin/login.php" class="btn btn-danger btnnn mt-4 text-center mr-4"><button></button>Admin</a>
-               </div>
-              </form>
-            </div>
-           </div>
+            <h1 class="mt-5 ml-3">Register as a patient</h1>
+
+            <div class= "col-lg-7 col-md-7 col-sm-7">
+            <form action="../p_action/p_insert.php" method="post" enctype="multipart/form-data">
+         <div class="form-group">
+         <label for="f_name">First Name</label>
+         <input type="text" class="form-control" placeholder="Enter your first name" id="f_name" name="f_name">
+         </div>
+         <div class="form-group">
+         <label for="l_name">Last Name</label>
+         <input type="text" class="form-control" placeholder="Enter your last name" id="l_name" name="l_name">
+         </div>
+         <div class="form-group">
+         <label for="email">Email Address</label>
+         <input type="text" class="form-control"  id="email" name="email" placeholder="Enter your email address">
+         </div>
+         <div class="form-group">
+         <label for="pass">Password</label>
+         <input type="password" class="form-control"  id="pass" name="pass" placeholder="Enter your password">
+         </div>
+         <div class="form-group">
+         <label for="age">Age</label>
+         <input type="number" class="form-control" placeholder="Enter your age" id="age" name="age">
+         </div>
+         <div class="form-group">
+         <label for="gender">Gender</label>
+         <br>
+         <select name="gender" id="gender">
+            <option value="">Select your Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+         </select>
+         </div>
+  </div>
+  <div class="col-lg-5 col-md-5 col-sm-6">
+    <div class="form-group">
+         <label for="dob">Enter your Date of Birth</label>
+         <input type="date" class="form-control"  id="dob" name="dob">
+         </div>
+         <div class="form-group">
+         <label for="address">Full Address</label>
+         <input type="text" class="form-control" placeholder="Enter your full address" id="add" name="add">
+         </div>
+         <div class="form-group">
+         <label for="number">Mobile Number </label>
+         <input type="text" class="form-control" placeholder="Enter your mobile number" id="num" name="num">
+         </div>
+  <img src="../images/pat.jpg" alt=""/>
+  </div>
+  </div>
+  <div class="text-center text-white">
+  <button type="submit" class="btn btn-danger mt-5 mb-5" name="register">Register now </button>
+  <br>
+  <a href="p_login.php" class="btn">Already have an account? Login now</a>
+  </form>
   </div>
       </div>
       </div>

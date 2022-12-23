@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -8,38 +12,32 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Covido</title>
+      <title>Patient Profile</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="../css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="../css/app.css">
       <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="../css/responsive.css">
       <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="icon" href="images/fevicon.png" type="image/gif"/>
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
        <link rel="stylesheet" href="css/owl.carousel.min.css"> 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="ttps://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <script src="https://kit.fontawesome.com/aec557161b.js" crossorigin="anonymous"></script>
+
    </head>
    <!-- body -->
    <body class="main-layout inner_page">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
-      </div>
-      <!-- end loader -->
       <!-- top -->
-      <!-- header -->
-         <header class="header-area">
-            <div class="left">
+     <!-- header -->
+     <header class="header-area">
+         <div class="left">
                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="right">
@@ -47,7 +45,7 @@
             </div>
             <div class="container">
                <div class="row d_flex">
-                  <div class="col-sm-3 logo_sm">
+                  <div class="col-sm-5 logo_sm">
                      <div class="logo">
                         <a href="index.php"></a>
                      </div>
@@ -56,20 +54,18 @@
                      <div class="navbar-area">
                         <nav class="site-navbar">
                            <ul>
-                           <li><a class="active" href="index.php">Home</a></li>
+                           <li><a href="index.php">Home</a></li>
                               <li><a href="hospitals.php">Hospitals</a></li>
-                              <li><a href="action.php">Take action</a></li>
-                              <!-- <li><a href="index.php" class="logo_midle">covido</a></li> -->
-                              <li><a href="news.php">news</a></li>
                               <li><a href="about.php">About Us</a></li>
                               <li><a href="contact.php">Contact Us </a></li>
-                           </ul>
+                        
+                        </ul>
                            <button class="nav-toggler">
-                             <span></span>
+                           <span></span>
                            </button>
                         </nav>
-                     </div>
-                  </div>
+               </div>
+               </div>
                </div>
             </div>
          </header>
@@ -78,24 +74,97 @@
      <!-- coronata -->
       <div class="coronata">
          <div class="container">
-            <div class="row d_flex grid">
-               <div class="col-md-7">
-                  <div class="coronata_img text_align_center">
-                     <figure><img src="images/corona.png" alt="#"/></figure>
-                  </div>
+            <div class="row">
+
+               <!-- ASIDE PANEL START -->
+
+            <div class="col-lg-2 col-md-2 col-sm-2">
+                <aside>
+                  <br>
+                  <br>
+                  <a href="profile.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My Profile</span></a>
+                  <br>
+                  <a href="app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3 mt-5">My appoinments</span></a>
+                    <br>
+                    <a href="b_app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
+                    <br>
+                    <a href="test_request.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request a Covid test</span></a>
+                    <br>
+                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Results</span></a>
+                    <br>
+                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Reports</span></a>
+                    <br>
+                    <br>
+                    <a href="p_out.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Logout</span></a>
+                    <br>
+                </aside>
+            </div>
+
+            <!-- ASIDE PANEL END -->
+            <!-- PROFILE WITH PHP START -->
+
+
+            <div class="col-lg-4 col-md-4 col-sm-4 ml-5">
+               <h2 class="text-uppercase">My profile   </h2>
+               <br>
+               <img src="../images/profile.jpeg" alt="profile image" height="100px" width="60%">
+               <br>
                </div>
-               <div class="col-md-5 oder1">
-                  <div class="titlepage text_align_left">
-                     <h2>Our News</h2>
-                     <p>when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
-                     </p>
-                     <a class="read_more" href="coronata.php">About More</a>
-                  </div>
+               <div class="col-lg-3 col-md-3 col-sm-3 ml-5">
+               <h4>Personal Information</h4>
+               <br>
+               <h6 class="font-weight-bold">PATIENT ID</h6>
+               <p><?php echo $_SESSION['id']; ?></p>
+               <br>
+              <?php
+              $id = $_SESSION['id'];
+              include '../config/db.php';
+              $query = "SELECT * FROM `patients` WHERE id =$id";
+              $result=mysqli_query($conn,$query);
+              while ($row = mysqli_fetch_assoc($result)){
+              ?>
+              <h6 class="font-weight-bold">PATIENT NAME</h6>
+               <p><?php echo $row['f_name']. " ".$row['l_name'];?></p>
+               <br>
+               <h6 class="font-weight-bold">PATIENT EMAIL</h6>
+               <p><?php echo $row['email']; ?></p>
+               <br>
+               <h6 class="font-weight-bold">PATIENT AGE</h6>
+               <p><?php echo $row['age']; ?></p>
+               <br>
+               <h6 class="font-weight-bold">PATIENT GENDER</h6>
+               <p><?php echo $row['gender']; ?></p>
+               <br>
+               <h6 class="font-weight-bold">PATIENT DATE OF BIRTH</h6>
+               <p><?php echo $row['dob']; ?></p>
+               <h6 class="font-weight-bold">PATIENT ADDRESS</h6>
+               <p><?php echo $row['address']; ?></p>
+               <br>
+               <h6 class="font-weight-bold">PATIENT PHONE NUMBER</h6>
+               <p><?php echo $row['m_number']; ?></p>
+               <br>
+               <a href="update_form.php?user_id=<?php echo $_SESSION['id'];?>"><button class="btn btn-success">Update</button></a>
+               <a href="../p_action/d_user.php?user_id=<?php echo $_SESSION['id'];?>"><button class="btn btn-danger">Delete</button></a>
+
+               <?php
+              }
+               ?>
                </div>
             </div>
-         </div>
-      </div>
+           
+            
+                        <!--PROFILE WITH PHP END  -->
+               </div>
+            </div>
       <!-- end coronata -->
+
+
+
+
+
+
+
+
       <!--  footer -->
       <footer>
          <div class="footer">
@@ -105,7 +174,7 @@
                            <div class="hedingh3 text_align_left">
                               <h3>Resources</h3>
                               <ul class="menu_footer">
-                                 <li><a href="index.php">Home</a><li>
+                                 <li><a href="../index.php">Home</a><li>
                                  <li><a href="">What we do</a><li>
                                  <li> <a href="">Media</a><li>
                                  <li> <a href="">Travel Advice</a><li>
@@ -137,7 +206,7 @@
                         <div class="hedingh3 text_align_left">
                               <h3>countrys</h3>
                            <div class="map">
-                              <img src="images/map.png" alt="#"/>
+                              <img src="../images/map.png" alt="#"/>
                            </div>
                         </div>
                      </div>
@@ -156,10 +225,10 @@
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="../js/jquery.min.js"></script>
+      <script src="../js/bootstrap.bundle.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
-      <script src="js/custom.js"></script>
+      <script src="../js/owl.carousel.min.js"></script>
+      <script src="../js/custom.js"></script>
    </body>
 </html>
