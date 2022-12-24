@@ -169,7 +169,7 @@ if(isset($_POST['login'])){
                         </div>
                      <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="hedingh3 text_align_left">
-                              <h3>countrys</h3>
+                              <h3>Countries</h3>
                            <div class="map">
                               <img src="../images/map.png" alt="#"/>
                            </div>

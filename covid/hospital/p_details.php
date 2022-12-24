@@ -90,14 +90,6 @@ include '../config/db.php';
                     <br>
                     <a href="b_app.php" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Book an appoinment</span></a>
                     <br>
-                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request a Covid test</span></a>
-                    <br>
-                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Request vaccination</span></a>
-                    <br>
-                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Results</span></a>
-                    <br>
-                    <a href="#" class="link ml-5 mt-5"><i class="fa-sharp fa-solid fa-plus mt-5"></i><span class="ml-3  mt-5">Reports</span></a>
-                    <br>
                 </aside>
             </div>
              <!-- SIDE PANEL END  -->
@@ -198,7 +190,7 @@ include '../config/db.php';
                         </div>
                      <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="hedingh3 text_align_left">
-                              <h3>countrys</h3>
+                              <h3>Countries</h3>
                            <div class="map">
                               <img src="../images/map.png" alt="#"/>
                            </div>
